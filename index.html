@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VODT — Virtual Oncology Development Team</title>
+  <meta name="description" content="Multi-agent AI vs. single-agent baseline on real FDA oncology review decisions." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <h1>VODT — Virtual Oncology Development Team</h1>
+      <p class="tag">A role-based multi-agent system that simulates an FDA oncology review team and
+        predicts regulatory actions, compared against a single-agent baseline and the real FDA outcome.</p>
+      <p id="run-meta" class="meta"></p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="summary" class="card">
+      <h2>VCDT vs. single-agent baseline</h2>
+      <div id="summary-body"></div>
+      <p class="disclaimer">Illustrative on a small case set — demonstrates the harness and metrics, not a
+        powered study result.</p>
+    </section>
+
+    <section class="layout">
+      <nav id="case-list" class="card cases"></nav>
+      <article id="case-detail" class="card detail">
+        <p class="placeholder">Select a case to see the deliberation.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <span>Static results viewer · data exported by <code>vodt export-web</code></span>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

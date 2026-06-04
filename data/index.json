@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-06-03T23:20:58",
+  "config": {
+    "debate_rounds": 3,
+    "model": "claude-sonnet-4-6"
+  },
+  "cases": [
+    {
+      "case_id": "NDA204114",
+      "drug_name": "MEKINIST",
+      "actual_action": "Approval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "NDA216340",
+      "drug_name": "KRAZATI",
+      "actual_action": "AcceleratedApproval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "talazoparib-mcrpc-odac-reject",
+      "drug_name": "Talzenna (talazoparib) + enzalutamide",
+      "actual_action": "CRL",
+      "predicted_action": "AcceleratedApproval",
+      "source": "odac"
+    }
+  ],
+  "summary": {
+    "team": {
+      "n": 3,
+      "reg_exact": 0.3333333333333333,
+      "reg_binary": 0.6666666666666666,
+      "fidelity_recall": 0.3333333333333333,
+      "dose_opt_rate": 0.6666666666666666,
+      "mean_discordance": 0.0
+    },
+    "baseline": {
+      "n": 3,
+      "reg_exact": 0.3333333333333333,
+      "reg_binary": 0.6666666666666666,
+      "fidelity_recall": 0.0,
+      "dose_opt_rate": 0,
+      "mean_discordance": 0.0
+    }
+  }
+}
