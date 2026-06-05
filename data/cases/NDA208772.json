@@ -1,0 +1,400 @@
+{
+  "meta": {
+    "case_id": "NDA208772",
+    "drug_name": "ALUNBRIG",
+    "indication": "------------------------------ severity withhold ALUNBRIG, then resume at the same dose, ALUNBRIG is a kinase inhibitor indicated for the treatment of adult reduce the dose, or permanently discontinue. (2.3, 5.8) patients with anaplastic lymphoma kinase (ALK)-positive metastatic \uf0b7 Embryo-Fetal Toxicity: Can cause fetal harm. Advise females of non-small cell lung cancer (NSCLC) as detected by an FDA-approved reproductive potential of the potential risk to a fetus and to use test. (1, 2.1) effecti",
+    "nda_bla": "NDA208772",
+    "source": "drugsfda",
+    "source_urls": [
+      "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2017/208772Orig1s000MultidisciplineR.pdf"
+    ]
+  },
+  "ground_truth": {
+    "actual_action": "AcceleratedApproval",
+    "cited_deficiencies": [
+      "Confirmatory trial required (accelerated approval)"
+    ],
+    "dose_decision": "------------------------- -----------------------------ADVERSE REACTIONS-------------------------------- 90 mg orally once daily for the first 7 days; then increase to 180 mg The most common adverse reactions (\u226525%) with ALUNBRIG were orally once daily. May be taken with or without food. (2.2) diarrhea, fatigue, nausea, rash, cough, myalgia, headache, hypertension, vomiting, and dyspnea. (6.1) ---------------------DOSAGE FORMS AND STRENGTHS---------------------- Tablets: 180 mg, 90 mg, or 30 mg. (3) To report SUSPECTED ADVERSE REACTIONS, contact Takeda -----------------------------CONTRAINDICA"
+  },
+  "team": {
+    "predicted_action": "AcceleratedApproval",
+    "discordance": 0.18633899812498245,
+    "aggregation_pattern": "conditional_consensus",
+    "aggregation_rationale": "mixed consensus (support=0.17, conditional=0.83, blockers=0) \u2014 non-blocking concerns warrant accelerated approval with PMRs.",
+    "per_agent_contribution": {
+      "regulatory": 0.0833,
+      "clinical": 0.0833,
+      "toxicology": 0.0833,
+      "clinical_pharmacology": 0.0833,
+      "biostatistics": 0.0833,
+      "cmc": 0.1667
+    },
+    "dose_recommendation": null,
+    "major_deficiencies": [
+      {
+        "description": "Confirmatory PMR structural mismatch: Study AP26113-13-301 is a first-line, crizotinib-na\u00efve RCT vs. crizotinib and cannot, by design, verify clinical benefit in the labeled post-crizotinib ALK+ NSCLC population under 21 CFR 314.510. The biologically distinct ALK resistance mutation profiles in post-crizotinib patients render first-line RCT data insufficient for conversion to regular approval. A registry-based external-control OS analysis with IPTW as the primary estimand (HR \u22640.75 anchor, one-sided alpha=0.10, stabilized-weight truncation, informative-censoring handling, and a dynamic N-expansion trigger if the effective-sample-size ratio from IPTW weight diagnostics falls below a pre-specified floor) must be designed, finalized in a locked SAP, and embedded in the approval order with a statutory milestone date before the NDA is approved. Non-compliance must trigger automatic show-cause proceedings under 21 CFR 314.530.",
+        "severity": "major",
+        "source_domain": "regulatory"
+      },
+      {
+        "description": "Confirmatory PMR structural mismatch (clinical perspective): The post-crizotinib labeled population harbors acquired ALK resistance mutations (e.g., G1202R, L1196M) that are biologically and clinically distinct from the treatment-na\u00efve population enrolled in Study 301. No confirmatory evidence of OS or PFS benefit in the actual labeled population will be generated unless a registry/external-control arm is mandated. The approval order must embed the locked SAP with a pre-specified HR \u22640.75 threshold and statutory milestone date as a condition of accelerated approval.",
+        "severity": "major",
+        "source_domain": "clinical"
+      },
+      {
+        "description": "Confirmatory PMR statistical architecture is incomplete: The SAP for the registry-based external-control OS analysis has not been finalized or locked. Key unresolved elements include: the dynamic N-expansion formula (mandatory registry expansion if effective-sample-size ratio from IPTW weight diagnostics falls below a pre-specified floor), stabilized-weight truncation rules, informative-censoring handling, and the pre-specified HR \u22640.75 decision threshold at one-sided alpha=0.10. Post-hoc threshold-setting is non-waivable. The full SAP must be negotiated, locked, and embedded in the approval order before the NDA is approved.",
+        "severity": "major",
+        "source_domain": "biostatistics"
+      },
+      {
+        "description": "Early-Onset Pulmonary Events (EOPE) labeling deficiency: The 90\u2192180 mg dose-escalation step is not conditioned on a mandatory, affirmative Day-7 pulmonary assessment gate in current draft labeling. Given the narrow nonclinical safety margin (monkey mortality at 15 mg/kg, AUC at or below 180 mg clinical exposure, due to pulmonary inflammation and pericarditis), the Day-7 pulmonary assessment must be embedded in labeling as a hard escalation prerequisite \u2014 not a soft recommendation. Grade \u22653 EOPE occurring in Week 1 must mandate permanent discontinuation. Default framing must be 90 mg-only unless the Day-7 gate is affirmatively cleared. This is a prescribing condition, not merely a warning.",
+        "severity": "major",
+        "source_domain": "toxicology"
+      },
+      {
+        "description": "EOPE labeling deficiency (clinical pharmacology perspective): The exposure-response relationship for EOPE has not been formally characterized with AUC as a covariate in the pivotal dataset. The Day-7 pseudo-steady-state anchor for the pulmonary gate is pharmacokinetically sound (pseudo-steady-state achieved at Day 7\u201310), but the AUC-EOPE relationship must be prospectively captured in Study 301 as a PMR condition. Until that analysis is available, the Day-7 gate must function as a hard prescribing prerequisite in labeling.",
+        "severity": "major",
+        "source_domain": "clinical_pharmacology"
+      },
+      {
+        "description": "Missing organ-impairment PK studies and strong CYP3A4 DDI data: Dedicated PK studies in patients with moderate-to-severe hepatic impairment and severe renal impairment are absent. A clinical DDI study with a strong CYP3A4 inducer (rifampin study was conducted; strong inhibitor itraconazole study was conducted, but labeling implications require finalization) has not been fully translated into dose-adjustment guidance. Interim labeling must state that no dose recommendation can be made for moderate-to-severe hepatic or severe renal impairment and must advise caution. These studies must be PMRs with binding milestone dates. The independent PK characterization of the active metabolite AP26123 in organ-impaired populations is also absent and must be included in the PMR scope.",
+        "severity": "major",
+        "source_domain": "clinical_pharmacology"
+      }
+    ],
+    "blind_positions": [
+      {
+        "domain": "regulatory",
+        "position": "conditional",
+        "confidence": 0.88,
+        "summary": "Brigatinib (ALUNBRIG) is a kinase inhibitor targeting ALK, ROS1, IGF-1R, and mutant EGFR, submitted for accelerated approval in adult patients with ALK-positive metastatic NSCLC who have progressed on or are intolerant to crizotinib. The regulatory evidentiary package is anchored on a single randomized non-comparative trial (ALTA, AP26113-13-201) demonstrating a 53% IRC-assessed confirmed ORR with a median duration of response of approximately 14 months in the 90\u2192180 mg arm (n=110), supported by a smaller Phase 1/2 study (AP26113-11-101). The indication as sought is appropriately narrow (post-crizotinib, ALK+ metastatic NSCLC, biomarker-selected by FDA-approved companion diagnostic), the surrogate endpoint (ORR/DoR) is consistent with the accelerated approval framework under 21 CFR 314.510, and a confirmatory randomized trial (AP26113-13-301, brigatinib vs. crizotinib first-line) is committed as a PMR. The overall regulatory package is consistent with the precedent set by ceritinib (NDA205755) and alectinib (NDA208434), both approved under accelerated approval in the same post-crizotinib setting. Residual uncertainties regarding special populations (hepatic/renal impairment, CYP3A4 DDI), CNS response durability, and the absence of a randomized comparator arm are appropriately addressed through labeling and PMRs/PMCs. No blocking regulatory deficiency is identified in this discipline.",
+        "key_concerns": [
+          "Single-arm pivotal trial: ALTA is a randomized non-comparative (two-arm, no placebo/active control) single trial; reliance on ORR as a surrogate endpoint requires accelerated approval pathway with a confirmatory PMR, not traditional approval \u2014 this is appropriately handled here but must be explicitly conditioned.",
+          "Confirmatory PMR adequacy: AP26113-13-301 (brigatinib vs. crizotinib first-line) is the designated confirmatory trial; however, it is first-line, not post-crizotinib, meaning it tests a different population than the approved indication. FDA must ensure this trial can verify clinical benefit in the post-crizotinib setting or require an additional confirmatory study.",
+          "IRC data integrity concern: OSI identified a lack of apparent audit trail for a substantial number of changes to imaging data in the IRC database. Although ARIAD's subsequent documentation submission resolved the OSI reviewer's concerns, this issue required active remediation during review and represents a process deficiency that should be flagged in labeling history.",
+          "CNS response durability: Intracranial ORR of ~67% in patients with measurable brain metastases (n=18) is promising but based on a very small subset with limited follow-up; median intracranial DoR was not mature at time of submission. A PMC for updated CNS response duration data is warranted.",
+          "Absence of OS or PFS data as primary endpoint: No randomized comparator arm precludes any conclusion on PFS or OS benefit; the accelerated approval framework is the only appropriate pathway, and the label must clearly communicate this limitation.",
+          "Special population dosing gaps: No dedicated studies in moderate-to-severe hepatic impairment, severe renal impairment, or strong CYP3A4 inhibitor/inducer co-administration at time of NDA submission; dose recommendations for these populations are absent or extrapolated.",
+          "Unmet need justification for third ALK inhibitor under accelerated approval: FDA guidance acknowledges it is preferable to have more than one accelerated approval in a class; the benefit-risk rationale for a third agent (after ceritinib and alectinib) must be explicitly articulated in labeling and the review record, particularly given the absence of head-to-head data.",
+          "Pediatric deferral: PREA obligations must be confirmed; no pediatric data submitted, and a deferral or waiver determination must be documented."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical",
+        "position": "conditional",
+        "confidence": 0.87,
+        "summary": "Brigatinib (ALUNBRIG) demonstrates a clinically meaningful and durable objective response rate of 53% by IRC assessment in 110 patients receiving the proposed 90\u2192180 mg dosing regimen in the ALTA trial, in a population with ALK-positive metastatic NSCLC who have progressed on or are intolerant to crizotinib. The median duration of response of approximately 14 months compares favorably to historical chemotherapy benchmarks (ORR ~20%, median PFS ~3 months) and to the approved accelerated-approval agents ceritinib and alectinib (ORR 38\u201344%, median DoR 7.4\u201311.2 months). Intracranial activity in patients with measurable brain metastases (~67% iORR) addresses a critical unmet need given the high rate of CNS progression on crizotinib. The safety profile, while including serious risks (early-onset pulmonary events/pneumonitis, hypertension, bradycardia, CPK elevation, hyperglycemia), appears manageable with dose modification and monitoring in the hands of oncologists. The application appropriately targets a well-defined biomarker-selected population (ALK+ by FDA-approved test) in a post-crizotinib setting with genuine unmet need. Accelerated approval on the basis of ORR as a surrogate reasonably likely to predict clinical benefit is appropriate, with a confirmatory randomized trial (AP26113-13-301 vs. crizotinib first-line) as a postmarketing requirement.",
+        "key_concerns": [
+          "Single-arm trial design with no randomized comparator arm in the post-crizotinib setting limits ability to isolate brigatinib's contribution to observed outcomes versus natural history or patient selection effects.",
+          "Approval rests on ORR/DoR as surrogate endpoints; no OS or PFS data from a randomized controlled trial in the sought indication are available at time of submission.",
+          "Intracranial ORR data are based on a small subset (n=18 with measurable brain metastases on the 90\u2192180 mg arm); durability of CNS response is immature and requires confirmatory follow-up.",
+          "Early-onset pulmonary events (EOPE/pneumonitis) occurring within the first 7 days of treatment in ~3% of patients at Grade 3\u20134 severity represent a potentially life-threatening and clinically distinctive toxicity requiring careful labeling and monitoring guidance.",
+          "Safety database is limited (~219 patients in ALTA, single-arm) with no non-brigatinib comparator, making it difficult to attribute causality for AEs that overlap with underlying disease (cough, dyspnea).",
+          "Uncertainty regarding appropriate dosing in patients with moderate-to-severe hepatic impairment, severe renal impairment, and in the context of strong CYP3A4 modulators \u2014 these gaps require postmarketing studies.",
+          "OSI initially raised concerns about IRC database integrity (audit trail for imaging data changes); although subsequently resolved by ARIAD's additional documentation, this represents a data quality issue that warranted scrutiny.",
+          "Absence of OS benefit data and limited PFS data mean the magnitude of clinical benefit beyond tumor shrinkage remains to be confirmed in the postmarketing confirmatory trial."
+        ],
+        "deficiencies": [
+          {
+            "description": "Efficacy supported solely by single-arm ORR/DoR data (no randomized PFS or OS evidence in the post-crizotinib ALK+ NSCLC population). While ORR is an accepted accelerated approval surrogate for NSCLC, clinical benefit has not been verified. This is the defining limitation of the application and is the basis for accelerated rather than regular approval; it is addressable through the mandatory confirmatory trial (AP26113-13-301) as a postmarketing requirement under Subpart H.",
+            "blocking": false
+          },
+          {
+            "description": "Early-onset pulmonary events (pneumonitis/interstitial lung disease) occurring within the first 7 days of treatment at Grade 3\u20134 severity in approximately 3% of patients on the proposed dosing regimen represent a clinically distinctive and potentially life-threatening toxicity. The 7-day lead-in at 90 mg was specifically designed to mitigate this risk, but the mechanism and optimal monitoring strategy are not fully characterized. This is addressable through labeling (Warnings and Precautions, dose modification guidance) and does not alone warrant a CRL.",
+            "blocking": false
+          },
+          {
+            "description": "Intracranial efficacy data are based on a very small evaluable subset (n=18 with measurable brain metastases on the 90\u2192180 mg arm). While the ~67% iORR is clinically compelling, the durability and depth of CNS response are immature. This uncertainty is addressable via postmarketing data collection from the ongoing confirmatory trial and does not block approval of the systemic indication.",
+            "blocking": false
+          },
+          {
+            "description": "Pharmacokinetic data are absent for patients with moderate-to-severe hepatic impairment, severe renal impairment, and for co-administration with strong CYP3A4 inducers/inhibitors in the clinical setting. Dosing recommendations for these subgroups cannot be made at approval. This is addressable through postmarketing commitments/requirements for dedicated PK studies and does not warrant a CRL given the oncology context.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "toxicology",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Brigatinib (ALUNBRIG) presents a nonclinical safety profile that is consistent with its pharmacological mechanism as a multi-kinase inhibitor. The key nonclinical toxicities \u2014 cardiac (myocardial degeneration, bradycardia, hypertension), pulmonary (inflammation), ocular (cataract, retinal degeneration), renal, reproductive, and pancreatic \u2014 are largely concordant with observed clinical adverse events and are adequately characterized for a drug intended to treat patients with advanced, life-threatening ALK-positive NSCLC under ICH S9 principles. The dose-step regimen (90 mg \u00d7 7 days \u2192 180 mg QD) provides a meaningful safety-informed rationale grounded in exposure-toxicity data. Several residual uncertainties \u2014 particularly around genotoxicity (in vivo aneugenic signal), reproductive risk, and the absence of carcinogenicity studies \u2014 are acceptable under ICH S9 for an oncology indication and are addressable through labeling and post-marketing commitments. No single nonclinical finding rises to the level of a blocking deficiency that would warrant a Complete Response Letter for this indication and population.",
+        "key_concerns": [
+          "In vivo micronucleus assay demonstrated dose-dependent aneugenic (clastogenic/aneugenic) chromosomal damage in erythrocytes, despite negative Ames and in vitro chromosomal aberration tests. This creates residual genotoxic risk uncertainty requiring careful contraception duration labeling.",
+          "Cardiac toxicity in rats (myocardial degeneration, acute hemorrhage) at exposures approximately 0.3x the clinical AUC at 180 mg is a narrow safety margin. Bradycardia and hypertension observed nonclinically are concordant with clinical findings and require robust labeling and monitoring guidance.",
+          "Pulmonary toxicity (inflammation) observed in the 6-month monkey study at exposures below clinical exposure at 180 mg is concordant with the clinically observed early-onset pulmonary events (EOPE) and pneumonitis. The safety margin is narrow.",
+          "Ocular toxicity (bilateral cataracts, retinal degeneration) in rats occurred in a dose- and time-dependent manner. Clinical visual toxicity has been reported. Long-term ocular risk in patients on chronic therapy is not fully characterized.",
+          "Embryo-fetal toxicity is severe: total resorption at 25 mg/kg (~1.26x human AUC at 180 mg), malformations at 12.5 mg/kg (~0.7x human AUC). Contraception duration labeling was a point of contention \u2014 the 4-month post-discontinuation recommendation for females is shorter than the draft guidance-recommended 6 months, representing residual uncertainty.",
+          "Renal toxicity signals (tubular dilation, degeneration, glomerulonephritis in rats; granular pigment in monkey kidneys) at exposures near or below clinical exposure. No dedicated renal impairment PK study at time of NDA submission for severe renal impairment.",
+          "Testicular degeneration and reduced sperm in rats; reduced testes weight in monkeys. Male fertility risk is not fully characterized; no dedicated male fertility study was conducted.",
+          "Pancreatic acinar atrophy in rats is concordant with clinical pancreatic enzyme elevations. Risk of clinical pancreatitis requires post-marketing follow-up.",
+          "Project Optimus consideration: The dose selection (90\u2192180 mg) was informed by exposure-response data from Study 201 showing dose-dependent Grade \u22653 AEs and efficacy, which is a reasonable but not fully optimized approach. The 90 mg lead-in is a pragmatic safety measure but a formal dose-optimization study was not conducted.",
+          "No carcinogenicity studies conducted \u2014 acceptable under ICH S9 for advanced cancer indication but should be noted.",
+          "Brigatinib inhibits 81 kinases at clinically achievable free Cmax concentrations, raising broad off-target toxicity concerns that are only partially characterized in the nonclinical package."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Brigatinib (ALUNBRIG) presents a well-characterized clinical pharmacology package for an ALK-positive NSCLC population post-crizotinib. The proposed 90\u2192180 mg once-daily step-up dosing regimen is supported by exposure-response (E-R) analyses from the ALTA trial demonstrating dose-dependent efficacy and toxicity, a population PK model, and a mechanistically plausible PK/PD rationale. The step-up design itself reflects a pragmatic attempt to mitigate early-onset pulmonary events (EOPEs) by limiting Cmax-driven toxicity in the first week. Key clinical pharmacology gaps\u2014missing dedicated organ-impairment studies for moderate-to-severe hepatic and severe renal impairment, and an absent strong CYP3A inducer/inhibitor clinical DDI study at steady state\u2014are clinically consequential but are appropriately addressed as post-marketing requirements and labeling guidance rather than approval-blocking deficiencies, given the life-threatening indication and the availability of interim labeling recommendations derived from popPK modeling. The overall clinical pharmacology data package is adequate to support accelerated approval with conditions.",
+        "key_concerns": [
+          "Missing dedicated hepatic impairment PK study (moderate-to-severe): dose recommendations for this subgroup are model-extrapolated, not empirically validated.",
+          "Missing severe renal impairment PK study: patients with severe renal impairment were not studied; interim labeling guidance is based on popPK covariate analysis only.",
+          "CYP3A4 strong inhibitor (itraconazole) DDI study conducted but only at single dose; steady-state interaction magnitude at the 180 mg maintenance dose is not fully characterized.",
+          "CYP3A4 strong inducer (rifampin) DDI study shows substantial reduction in brigatinib exposure (~80% AUC reduction); labeling must strongly caution against concomitant use, but no alternative dose has been empirically validated.",
+          "CYP2C8 is the primary metabolic pathway (~72%); no dedicated clinical CYP2C8 inhibitor DDI study (e.g., gemfibrozil) was conducted at the therapeutic dose\u2014only a CYP2C8 inhibitor study is referenced in the review tables.",
+          "Exposure-response for the EOPE (early-onset pulmonary event) signal is Cmax-driven; the 7-day step-up from 90 mg is a reasonable but not fully optimized mitigation\u2014alternative step-up schedules were not formally modeled.",
+          "Food effect study shows high-fat meal reduces Cmax ~13% and delays Tmax but AUC is not meaningfully altered; labeling can be administered with or without food\u2014this is adequately characterized.",
+          "QT risk: hERG IC50 >10 \u00b5M and no QTcB prolongation in monkeys or dedicated thorough QT study; QT-IRT review referenced but a dedicated TQT study was not conducted\u2014this is acceptable given the oncology setting and available data.",
+          "Pediatric PK data absent; PREA deferral expected but no PK bridging strategy described for adolescent patients."
+        ],
+        "deficiencies": [
+          {
+            "description": "Absence of a dedicated clinical hepatic impairment PK study for moderate-to-severe hepatic impairment (Child-Pugh B/C). Brigatinib is extensively metabolized (CYP2C8/CYP3A4); patients with moderate-to-severe hepatic impairment may have substantially elevated exposure (higher AUC and Cmax), increasing risk of serious toxicities including pulmonary events, bradycardia, and CPK elevation. Current dose recommendations for this subgroup rely solely on popPK covariate modeling, which is insufficient for a label-directed dose recommendation. This is addressable as a post-marketing requirement with interim labeling guidance to avoid use or use with caution, and does not by itself warrant a CRL given the life-threatening indication.",
+            "blocking": false
+          },
+          {
+            "description": "Absence of a dedicated clinical severe renal impairment PK study (eGFR <30 mL/min). Although renal excretion is a minor elimination route (~10% in feces-dominant excretion), active metabolites and altered protein binding in severe renal impairment could affect free drug exposure. PopPK covariate analysis provides only a preliminary estimate. A PMR to conduct this study with interim labeling caution is the appropriate resolution.",
+            "blocking": false
+          },
+          {
+            "description": "CYP3A4 strong inhibitor DDI (itraconazole) was evaluated only after a single dose of brigatinib, not at steady state with the 180 mg maintenance dose. Given that itraconazole increased brigatinib AUC approximately 2-fold in the single-dose study, the steady-state interaction magnitude\u2014relevant to the clinical maintenance dose\u2014is not empirically established. Labeling recommends a 50% dose reduction with strong CYP3A inhibitors, but this recommendation is not validated by a steady-state DDI study. This is resolvable via a PMR and interim labeling.",
+            "blocking": false
+          },
+          {
+            "description": "No dedicated clinical CYP2C8 inhibitor DDI study was conducted at therapeutic doses despite CYP2C8 being the dominant metabolic pathway (~72% contribution in vitro). The gemfibrozil interaction study referenced in the review tables is the only available data point; the magnitude of CYP2C8 inhibition on steady-state brigatinib exposure at 180 mg is not fully characterized. This is a labeling and PMR-resolvable issue given the oncology context.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "biostatistics",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Brigatinib (ALUNBRIG) is seeking accelerated approval for ALK-positive metastatic NSCLC after progression on or intolerance to crizotinib, based primarily on the single-arm, randomized (non-comparative) ALTA trial (Study AP26113-13-201). The primary efficacy endpoint is IRC-assessed confirmed objective response rate (ORR). From a biostatistics perspective, the pivotal evidence is statistically coherent and internally consistent for an accelerated approval submission: the IRC-assessed confirmed ORR of 53% (Arm B, 90\u2192180 mg, n=110) is large in magnitude relative to historical controls and is supported by investigator-assessed ORRs, a supportive Phase 1/2 study (AP26113-11-101), and a durable median duration of response (~14 months). The single-arm design is appropriate for the accelerated approval pathway and the ORR endpoint is well-established in this setting. Key statistical limitations include the absence of a randomized comparator arm (precluding formal hypothesis testing against a control), reliance on a single pivotal trial, immature duration-of-response and PFS/OS data, and some multiplicity concerns in secondary/exploratory analyses. These limitations are consistent with the accelerated approval framework and are addressable through the confirmatory PMR trial (AP26113-13-301 vs. crizotinib). No blocking statistical deficiency is identified; the evidentiary bar for accelerated approval based on ORR is met.",
+        "key_concerns": [
+          "Single-arm design: no randomized comparator arm in the pivotal ALTA trial, so no formal hypothesis test against a control; the 53% ORR is compelling in magnitude but cannot be attributed to treatment effect with the same rigor as a randomized trial.",
+          "Multiplicity not formally controlled across secondary and exploratory endpoints (intracranial ORR, PFS, OS, subgroup analyses by ALK mutation status, brain metastasis status, prior lines of therapy); these are treated as supportive but the lack of a pre-specified multiplicity adjustment plan is a statistical weakness.",
+          "Immature duration-of-response and survival data: median DoR of ~14 months is based on limited follow-up; PFS and OS data are not mature and cannot serve as confirmatory evidence of clinical benefit at this time.",
+          "Intracranial ORR analyses (n=18 with measurable brain metastases in Arm B) are based on very small subsets, yielding wide confidence intervals and limited inferential value; these are exploratory and should not be interpreted as confirmatory.",
+          "IRC database integrity concerns (noted by OSI): a substantial number of changes to imaging data lacked an apparent audit trail at the time of inspection. Although ARIAD subsequently provided source documentation and OSI concluded the data appear reliable, this episode introduces residual uncertainty about the robustness of the IRC-assessed primary endpoint.",
+          "Exposure-response analyses (logistic regression for ORR and safety endpoints) are exploratory and post-hoc; the multivariate models are not pre-specified primary analyses and should not be used to justify dose selection without appropriate caution.",
+          "Single pivotal trial: reliance on one study for the primary efficacy claim is a statistical limitation, partially mitigated by the supportive Phase 1/2 study (AP26113-11-101) showing investigator-assessed ORRs >50% across two dose cohorts.",
+          "Sample size and power: the ALTA trial was not powered for a formal superiority test against a pre-specified null hypothesis ORR; the statistical plan appears to use a one-sample test against a historical null (e.g., ~30% ORR for chemotherapy), which is appropriate for accelerated approval but introduces uncertainty about the choice of null hypothesis."
+        ],
+        "deficiencies": [
+          {
+            "description": "Absence of a randomized comparator arm in the pivotal ALTA trial: the single-arm design precludes formal causal inference about treatment effect on ORR relative to a concurrent control. While appropriate for accelerated approval, this constitutes a Major Deficiency in the confirmatory evidentiary standard and must be resolved by the ongoing PMR trial (AP26113-13-301). This is not blocking for accelerated approval but is a condition of that approval.",
+            "blocking": false
+          },
+          {
+            "description": "Uncontrolled multiplicity across secondary and exploratory endpoints: intracranial ORR, PFS, OS, and numerous subgroup analyses were not subject to a pre-specified, hierarchical multiplicity adjustment plan. Positive findings in these analyses (e.g., intracranial ORR in the small subset with measurable brain metastases) cannot be considered confirmatory and should be clearly labeled as exploratory in the prescribing information. This is addressable by labeling and does not warrant a Complete Response Letter.",
+            "blocking": false
+          },
+          {
+            "description": "IRC database integrity: OSI identified a substantial number of post-hoc changes to imaging data without an apparent audit trail during inspection. Although ARIAD's subsequent submission of source documentation was deemed sufficient by OSI to resolve the concern, the episode introduces residual uncertainty about the integrity of the IRC-assessed primary ORR. This is reviewable and resolved by OSI's final determination, but warrants notation.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "cmc",
+        "position": "support",
+        "confidence": 0.82,
+        "summary": "From a CMC perspective, NDA 208772 for brigatinib (ALUNBRIG) presents a straightforward small-molecule oral tablet product. The multidisciplinary review explicitly states that the CMC reviewer found no identified CMC deficiencies, no novel excipients of concern, and no impurities of concern. The drug substance and drug product reviews (OPQ) were completed without identified deficiencies. The facility inspection for the sponsor (ARIAD) received a NAI (No Action Indicated) designation from OSI. The product is a conventional solid oral dosage form (tablet) in two strengths (30 mg and 90 mg), which does not carry the complex CMC challenges associated with biologics, ADCs, or bispecifics (e.g., no aggregation, DAR drift, or cold-chain concerns). Pre-NDA meetings addressed dissolution procedures, drug product specifications, and shelf life, and agreement was reached on the content and format of the quality submission. On the basis of the information available in this review package, the CMC bar for approval appears to have been met for this NME small-molecule tablet.",
+        "key_concerns": [
+          "The multidisciplinary review provides only a brief summary of CMC findings; the full OPQ drug substance, drug product, microbiology, and facilities reviews are not reproduced in this package, limiting independent verification of all quality data.",
+          "Bridging data adequacy for both the 30 mg and 90 mg tablet strengths was discussed pre-NDA; the review confirms agreement was reached, but the underlying dissolution and specification data are not directly visible in this package.",
+          "Shelf life and stability data supporting the proposed commercial shelf life are referenced but not detailed in this summary review; ICH Q1 compliance is assumed based on the absence of flagged deficiencies.",
+          "Post-marketing commitments regarding drug-drug interaction studies (CYP3A4 perpetrator/victim studies) have indirect CMC relevance to labeling of storage and handling, but these are clinical pharmacology issues rather than CMC blocking concerns.",
+          "No novel excipients were identified, and no unique human metabolites were detected that would require additional impurity qualification under ICH Q3A/Q3B."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      }
+    ],
+    "debate_rounds": [
+      {
+        "round": 1,
+        "topic": "Accelerated Approval Pathway Adequacy & Confirmatory PMR Sufficiency",
+        "summary": "**Round 1 Minutes \u2014 Accelerated Approval Pathway Adequacy & Confirmatory PMR Sufficiency**\n\n**Regulatory** argued that AP26113-13-301's first-line design cannot verify benefit in the labeled post-crizotinib population, and proposed either a dedicated post-crizotinib RCT or a prospectively planned real-world/registry OS analysis with a pre-specified comparator arm as a labeling condition for conversion. All agreed this is a reviewable deficiency, not a CRL issue.\n\n**Clinical** emphasized that acquired ALK resistance mutations make the populations biologically distinct, and proposed using mature ALTA OS data against an external control drawn from ceritinib/alectinib FDA approval datasets, calibrated to a disease-specific ORR-to-OS translation benchmark.\n\n**Biostatistics** rejected the crossover subgroup approach as underpowered and confounded, and conditionally accepted the external control OS proposal only if FDA pre-commits to a statistical analysis plan (defined HR threshold, one-sided alpha, informative-censoring handling) before data submission, warning that post-hoc threshold-setting is non-waivable.\n\n**Convergence:** All three disciplines agree 301's first-line PFS result alone is insufficient for conversion in the post-crizotinib indication.\n\n**Remaining split:** Acceptable evidentiary vehicle and required statistical safeguards for any external-control or registry-based confirmatory analysis."
+      },
+      {
+        "round": 2,
+        "topic": "Evidentiary Sufficiency of Single-Arm ORR Data as the Sole Pivotal Evidence",
+        "summary": "**Round 2 Minutes \u2014 Evidentiary Sufficiency of Single-Arm ORR Data as Sole Pivotal Evidence**\n\n**Regulatory** accepted the registry-cohort design and IPTW-as-primary-estimand, then introduced a new enforceability argument: all four SAP elements must be embedded in the approval order itself (not side agreements), with a statutory milestone date, so that non-compliance triggers an automatic show-cause proceeding under 21 CFR 314.530. Cited pembrolizumab MSI-H PMR as precedent.\n\n**Clinical** accepted the approval-order embedding and introduced a new requirement: the order must also pre-specify a minimum clinically meaningful OS HR threshold (\u22640.75), arguing a statistically significant but trivial HR (e.g., 0.95) cannot satisfy 21 CFR 314.510 conversion adequacy. Grounded the 0.75 anchor in ceritinib/ALTA data.\n\n**Biostatistics** accepted HR \u22640.75 and introduced a new technical requirement: the locked SAP must pre-specify a minimum enrolled-N formula as a function of the observed effective-sample-size ratio from interim IPTW weight diagnostics, with a mandatory registry expansion trigger if the ratio falls below a pre-specified floor, ensuring the HR threshold is practically detectable after variance inflation.\n\n**Convergence:** All three disciplines now agree on registry design, IPTW as primary estimand, stabilized-weights truncation, one-sided alpha=0.10, HR \u22640.75 anchor, and approval-order embedding of the SAP.\n\n**Remaining split:** Biostatistics' dynamic N-expansion formula has not yet been accepted by Regulatory or Clinical."
+      },
+      {
+        "round": 3,
+        "topic": "Early-Onset Pulmonary Events (EOPE): Narrow Nonclinical Safety Margin vs. Clinical Manageability",
+        "summary": "**Round 3 Minutes \u2014 EOPE Risk Mitigation**\n\n**Convergence:** All three disciplines rejected REMS in favor of labeled prescribing conditions. They aligned on: (1) permanent discontinuation for Grade \u22653 EOPE within Week 1; (2) a mandatory Day-7 pulmonary assessment gate as a hard escalation prerequisite, anchored by Clinical Pharmacology's popPK finding that 90 mg pseudo-steady-state is reached at Day 7\u201310; and (3) prospective EOPE-by-onset-day capture with AUC covariates in Study 301 as the PMR vehicle.\n\n**New Arguments:**\n- **Clinical** proposed permanent contraindication of 180 mg escalation after any Grade 1\u20132 EOPE in Week 1, citing subclinical cumulative alveolitis risk.\n- **Toxicology** endorsed this but reframed 180 mg authorization as a positive prescribing condition (default is 90 mg-only unless Day-7 assessment is clean), consistent with ICH S9 NOAEL-below-therapeutic-exposure standards.\n- **Clinical Pharmacology** escalated the Project Optimus dimension: the 90 mg vs. 180 mg efficacy comparison has never been formally tested for non-inferiority, and required Study 301's SAP to include a pre-specified exposure-stratified ORR analysis, with a labeled dose revision mandated if 90 mg proves non-inferior.\n\n**Remaining Split:** Whether Study 301 findings would trigger a dose revision (Clinical Pharmacology's position) versus a safety update only \u2014 not yet resolved."
+      }
+    ],
+    "final_positions": [
+      {
+        "domain": "regulatory",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Brigatinib (ALUNBRIG) presents a compelling single-arm efficacy signal in a high-unmet-need post-crizotinib ALK+ NSCLC population: 53% IRC-confirmed ORR with ~14-month median DoR in Arm B of ALTA, with intracranial activity. These data satisfy the Accelerated Approval surrogate endpoint standard under 21 CFR 314.510 \u2014 ORR is reasonably likely to predict clinical benefit in this setting, consistent with precedent for ceritinib (NDA205755) and alectinib (NDA208434). The evidentiary package is adequate for accelerated approval with robust PMR conditions. However, the confirmatory trial (AP26113-13-301) is a first-line crizotinib-na\u00efve RCT that cannot, by design, verify clinical benefit in the labeled post-crizotinib population \u2014 a structural deficiency in the PMR architecture that is reviewable but must be resolved in the approval order itself. The debate has sharpened and substantially refined the path to resolution: all disciplines now converge on a registry-based external-control OS analysis with IPTW as primary estimand, HR \u22640.75 anchor, one-sided alpha=0.10, and approval-order embedding of the locked SAP. This is a conditional support position \u2014 the deficiency is not blocking because the surrogate endpoint is well-validated in this class and the PMR framework is enforceable, but conversion to regular approval requires the confirmatory architecture agreed in the debate.",
+        "key_concerns": [
+          "Confirmatory PMR structural mismatch: Study AP26113-13-301 is a first-line crizotinib-na\u00efve RCT and cannot verify clinical benefit in the labeled post-crizotinib population under 21 CFR 314.510 \u2014 must be supplemented by a registry-based external-control OS analysis with IPTW as primary estimand, embedded in the approval order with statutory milestone date.",
+          "Approval-order embedding of the full SAP (HR \u22640.75 anchor, one-sided alpha=0.10, stabilized-weights truncation, informative-censoring handling, minimum enrolled-N formula) must be finalized before approval \u2014 non-compliance must trigger automatic show-cause under 21 CFR 314.530.",
+          "Biostatistics' dynamic N-expansion formula (mandatory registry expansion if effective-sample-size ratio from IPTW weight diagnostics falls below pre-specified floor) is unresolved between disciplines and must be negotiated and locked in the SAP before the approval order is signed.",
+          "EOPE labeling must implement the Day-7 pulmonary assessment gate as a hard escalation prerequisite (not a recommendation), with default 90 mg-only framing and permanent discontinuation for Grade \u22653 EOPE in Week 1 \u2014 this is a prescribing condition, not merely a warning.",
+          "Project Optimus dimension: the 90 mg vs. 180 mg efficacy comparison has never been formally tested for non-inferiority; Study 301 SAP must include a pre-specified exposure-stratified ORR analysis with a pre-defined decision rule for labeled dose revision if 90 mg proves non-inferior.",
+          "Safety database size (N=219 in ALTA, N=110 in Arm B) precludes definitive subgroup safety conclusions; moderate-to-severe hepatic impairment, severe renal impairment, and CYP3A4 DDI dose-adjustment studies must be PMRs with milestone dates.",
+          "IRC database integrity concerns (lack of apparent audit trail for imaging data changes) were resolved by ARIAD's March 13, 2017 submission \u2014 OSI concluded data appear reliable; no residual blocking concern, but the resolution should be documented in the approval order."
+        ],
+        "deficiencies": [],
+        "key_rationale": "My pre-debate position was conditional support, and it holds \u2014 but the debate materially sharpened the PMR architecture in ways that strengthen enforceability and reduce residual regulatory risk. Three things changed or were confirmed: (1) The Round 1 convergence that Study 301's first-line PFS result alone cannot verify benefit in the post-crizotinib labeled population was the critical regulatory acknowledgment I needed. This is not a CRL issue because the surrogate endpoint (ORR) is well-validated in ALK+ NSCLC and the effect size is large, but it means the PMR must be structurally redesigned \u2014 the approval order must embed a registry-based external-control OS analysis, not merely reference Study 301. (2) The Round 2 convergence on IPTW-as-primary-estimand, HR \u22640.75, one-sided alpha=0.10, and approval-order embedding (with pembrolizumab MSI-H PMR as explicit precedent) resolves my primary enforceability concern. The Clinical proposal to anchor the HR threshold at \u22640.75 grounded in ceritinib/ALTA data is scientifically defensible and I accept it. Biostatistics' dynamic N-expansion formula remains unresolved between disciplines but does not rise to a blocking deficiency \u2014 it is a technical SAP element that can be negotiated pre-approval and embedded in the order. (3) The Round 3 EOPE framework \u2014 Day-7 pulmonary assessment gate as a hard escalation prerequisite, permanent discontinuation for Grade \u22653 EOPE in Week 1, and default 90 mg-only labeling unless the Day-7 gate is clean \u2014 is a materially stronger risk management construct than standard labeling alone, and I accept it as adequate without REMS. The unresolved Clinical Pharmacology question of whether Study 301 exposure-stratified ORR data should trigger a mandatory dose revision is a labeling/PMR issue, not a blocking deficiency. My position remains conditional: accelerated approval is supportable; conversion requires the approval-order-embedded confirmatory architecture described above."
+      },
+      {
+        "domain": "clinical",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Brigatinib (ALUNBRIG) demonstrates a clinically meaningful 53% IRC-assessed ORR with ~14-month median DOR in crizotinib-pretreated ALK+ NSCLC patients \u2014 a population with high unmet need and limited alternatives. The ALTA trial, though single-arm and lacking an OS readout, provides evidence reasonably likely to predict clinical benefit under 21 CFR 314.510 accelerated approval standards. The debate reinforced that the confirmatory PMR (Study 301) is structurally inadequate for the labeled post-crizotinib indication, but this is a reviewable deficiency addressable through approval-order-embedded SAP conditions. The EOPE risk is real but manageable through the labeled 7-day dose-escalation gate and mandatory Day-7 pulmonary assessment. On balance, the benefit-risk profile supports conditional accelerated approval with robust PMR conditions.",
+        "key_concerns": [
+          "Confirmatory PMR (Study 301) uses a first-line vs. crizotinib design that cannot verify benefit in the labeled post-crizotinib population due to biologically distinct ALK resistance mutation profiles \u2014 requires approval-order-embedded registry/external-control OS analysis with pre-specified HR \u22640.75 threshold and statutory milestone date",
+          "No formal non-inferiority comparison of 90 mg vs. 180 mg efficacy \u2014 Study 301 SAP must include pre-specified exposure-stratified ORR analysis; labeled dose revision should be a PMR condition if 90 mg proves non-inferior",
+          "EOPE risk requires Day-7 pulmonary assessment as a hard escalation prerequisite in labeling, not a soft recommendation; Grade \u22653 EOPE in Week 1 should mandate permanent discontinuation",
+          "Single-arm ORR as sole pivotal evidence introduces uncertainty about magnitude of benefit relative to active comparators (ceritinib, alectinib); no head-to-head data available",
+          "Mature OS data from ALTA not yet available; ORR-to-OS translation in post-crizotinib ALK+ NSCLC is supported by ceritinib/alectinib precedent but not directly validated for brigatinib",
+          "CNS response data (intracranial ORR ~67% in measurable brain mets at 90\u2192180 mg) is clinically important but based on small subgroup (n=18); DOR in CNS responders requires post-marketing confirmation"
+        ],
+        "deficiencies": [],
+        "key_rationale": "My pre-debate position of conditional support is unchanged but is now more precisely grounded. Three elements evolved: (1) The confirmatory PMR gap is sharper than I initially framed \u2014 Study 301's first-line vs. crizotinib design cannot verify benefit in the post-crizotinib labeled population due to biologically distinct resistance mutation profiles (acquired ALK kinase domain mutations in the post-crizotinib setting vs. treatment-naive tumors). All disciplines converged that 301's first-line PFS result alone is insufficient for conversion. I now explicitly flag this as a non-blocking but major deficiency requiring approval-order-embedded SAP conditions including: registry/external-control OS analysis, IPTW as primary estimand, pre-specified HR \u22640.75 threshold, one-sided alpha=0.10, and a statutory milestone date. (2) The EOPE debate strengthened my support for the labeled 7-day escalation gate as a hard prescribing condition rather than a soft recommendation. I accept the reframing of 180 mg escalation as a positive prescribing condition (default 90 mg-only unless Day-7 assessment is clean), and I endorse permanent discontinuation for Grade \u22653 EOPE in Week 1. I do not support a blanket contraindication of escalation after any Grade 1\u20132 EOPE in Week 1, as this is overly restrictive given the efficacy signal at 180 mg and the absence of formal non-inferiority data for 90 mg. (3) The Project Optimus dimension raised by Clinical Pharmacology \u2014 that 90 mg vs. 180 mg has never been formally tested for non-inferiority \u2014 is a legitimate concern I now incorporate as a reviewable deficiency, addressable by requiring Study 301's SAP to include a pre-specified exposure-stratified ORR analysis. A labeled dose revision mandate if 90 mg proves non-inferior is premature at approval but appropriate as a PMR condition. The single-arm ORR evidence remains sufficient for accelerated approval given the disease context, historical ORR benchmarks for cytotoxic chemotherapy (~20% in post-platinum ALK+ NSCLC), and the durability of response (~14 months DOR vs. ~7 months for ceritinib). No blocking deficiency exists in my domain."
+      },
+      {
+        "domain": "toxicology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Brigatinib's nonclinical safety package is adequate for accelerated approval under ICH S9 standards for an anticancer drug in a serious, life-threatening indication. The general toxicology program (6-month rat and monkey studies), genotoxicity battery, reproductive/developmental toxicology, and safety pharmacology collectively characterize the key risks \u2014 pulmonary toxicity, cardiac effects (bradycardia, hypertension), ocular toxicity, CPK/pancreatic enzyme elevation, and embryo-fetal harm \u2014 all of which are reflected in clinical observations and are addressable through labeling, dose modification guidance, and PMRs. The most significant nonclinical concern from a toxicology perspective is the narrow safety margin for early-onset pulmonary events (EOPE): monkey mortality at 15 mg/kg (AUC below clinical exposure at 180 mg) due to pulmonary and pericardial inflammation directly maps to the clinical EOPE signal. The debate has sharpened my view that the 90\u2192180 mg escalation step requires a positive prescribing gate (clean Day-7 pulmonary assessment) embedded in labeling as a hard condition, not merely a recommendation. The dose-optimization question raised under Project Optimus \u2014 whether 180 mg is necessary given the absence of a formal non-inferiority comparison to 90 mg \u2014 remains an unresolved but non-blocking concern addressable via Study 301's SAP. No nonclinical finding alone rises to a blocking CRL-level deficiency given the ICH S9 context and the available risk mitigation framework.",
+        "key_concerns": [
+          "Narrow nonclinical safety margin for pulmonary toxicity: monkey mortality at 15 mg/kg (AUC at or below 180 mg clinical exposure) due to pulmonary inflammation and pericarditis directly predicts the clinical EOPE signal; the 90\u2192180 mg escalation step was not designed with therapeutic index optimization in mind.",
+          "Project Optimus dose justification gap: no formal non-inferiority or dose-comparison analysis between 90 mg and 180 mg for efficacy; the dose escalation appears MTD-driven rather than therapeutic-index-optimized, inconsistent with current Project Optimus expectations.",
+          "Aneugenic genotoxicity (in vivo micronucleus): dose-dependent chromosomal damage in the in vivo assay requires robust contraception labeling; the negotiated 4-month post-discontinuation window for females carries residual uncertainty relative to the draft OHOP guidance recommending 6 months.",
+          "Ocular toxicity (cataract, retinal degeneration) observed in rats in a dose- and time-dependent manner; one Grade 3 cataract and one Grade 3 macular edema in clinical data suggest this nonclinical signal is clinically manifest and requires ongoing ophthalmologic monitoring language in labeling.",
+          "Cardiac toxicity (myocardial degeneration, acute hemorrhage) in rats at approximately 0.3x clinical AUC at 180 mg; while bradycardia and hypertension are labeled, the severity of the nonclinical cardiac findings at low multiples of clinical exposure warrants explicit dose-modification guidance for cardiac endpoints.",
+          "Rhabdomyolysis risk: marked CPK elevations in nonclinical studies and clinical data; the post-marketing follow-up for rhabdomyolysis is appropriate but the nonclinical renal safety pharmacology data (elevated creatinine, reduced creatinine clearance at 25 mg/kg single dose) suggest the kidney is a co-target that may amplify CPK-related renal injury."
+        ],
+        "deficiencies": [],
+        "key_rationale": "My pre-debate position was conditional support, and it holds after the debate \u2014 but with sharper articulation of the conditions. Three things changed or were reinforced: (1) The Round 3 convergence on a mandatory Day-7 pulmonary assessment gate as a hard escalation prerequisite directly validates my core nonclinical concern: the monkey pulmonary/pericardial mortality at exposures at or below the 180 mg clinical AUC is the most dangerous nonclinical-to-clinical translation in this package, and the labeled 90\u2192180 mg step was never adequately justified as a safety-optimized dose rather than an MTD-driven one. The debate's reframing of 180 mg authorization as a positive prescribing condition (default 90 mg-only unless Day-7 gate is clean) is exactly the ICH S9 NOAEL-anchored approach I would require. (2) Clinical Pharmacology's Project Optimus escalation \u2014 that 90 mg vs. 180 mg efficacy has never been formally tested for non-inferiority \u2014 reinforces my toxicology concern that the dose was selected to maximize exposure rather than therapeutic index. This is a reviewable deficiency, not blocking, because Study 301's SAP can prospectively address it with an exposure-stratified ORR analysis and a labeled dose revision trigger. (3) The in vivo micronucleus aneugenic finding remains a labeling-level concern (contraception duration language), not a CRL issue, and the embryo-fetal toxicity data are adequately reflected in the proposed Warnings and Precautions. No new information from the debate elevates any nonclinical finding to blocking status. The conditions for my support are: (a) Day-7 pulmonary assessment gate embedded as a hard prescribing condition in labeling, not advisory language; (b) permanent discontinuation for Grade \u22653 EOPE within Week 1 and prohibition of 180 mg escalation after any Grade 1\u20132 EOPE in Week 1, consistent with the cumulative alveolitis risk suggested by the nonclinical time-course of pulmonary findings; (c) Study 301 SAP pre-specification of exposure-stratified ORR analysis to address the 90 mg vs. 180 mg dose-optimization question as a PMR; and (d) prospective EOPE-by-onset-day capture with AUC covariates in Study 301."
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Brigatinib's clinical pharmacology package is substantially adequate for accelerated approval in the post-crizotinib ALK+ NSCLC population. The 90\u2192180 mg step-up regimen is supported by a well-characterized popPK model, exposure-response analyses demonstrating dose-dependent efficacy and toxicity, and a plausible PK rationale for the 7-day lead-in (pseudo-steady-state at Day 7\u201310). However, the debate has sharpened two unresolved Clinical Pharmacology deficiencies: (1) the 90 mg vs. 180 mg dose comparison has never been formally tested for non-inferiority on efficacy endpoints, leaving the optimal dose unvalidated under Project Optimus principles; and (2) missing organ-impairment (moderate-severe hepatic, severe renal) and strong CYP3A4 DDI studies represent clinically consequential gaps for a drug primarily metabolized by CYP2C8/CYP3A4. Both deficiencies are addressable via PMRs and labeling restrictions, not CRL-worthy on their own, and the overall exposure-response evidence is sufficient to support the accelerated approval framework. My position is conditional support, contingent on PMR commitments for dose optimization and organ-impairment/DDI studies.",
+        "key_concerns": [
+          "90 mg vs. 180 mg non-inferiority for efficacy has never been formally tested; Project Optimus requires a pre-specified exposure-stratified ORR analysis in Study 301 SAP with a labeled dose revision trigger if 90 mg proves non-inferior on efficacy with superior tolerability",
+          "Missing dedicated organ-impairment PK studies for moderate-to-severe hepatic impairment and severe renal impairment \u2014 interim labeling must state no dose recommendation and advise caution",
+          "Missing clinical DDI study with a strong CYP3A4 inhibitor (e.g., itraconazole study was conducted but a strong inducer clinical study with rifampin was conducted \u2014 labeling must recommend 50% dose reduction with strong CYP3A4 inhibitors and avoidance of strong inducers pending PMR confirmation)",
+          "Exposure-response for EOPE has not been formally characterized with AUC as a covariate in the pivotal dataset; the Day-7 pseudo-steady-state anchor for the pulmonary gate is pharmacokinetically sound but the AUC-EOPE relationship needs prospective capture in Study 301",
+          "The main metabolite AP26123 contributes up to 10% of parent exposure and has comparable ALK potency; its independent PK characterization in organ-impaired populations is absent"
+        ],
+        "deficiencies": [],
+        "key_rationale": "My pre-debate position was conditional support, and the debate has reinforced rather than changed that stance, while adding specificity to two deficiencies. The most important development from the debate is Clinical Pharmacology's own escalation in Round 3: the 90 mg vs. 180 mg efficacy comparison has never been formally tested for non-inferiority. The ALTA trial was a randomized non-comparative design between two dose arms, not powered or pre-specified for a non-inferiority dose comparison. The exposure-response analyses (Table 53, Table 60) show a positive exposure-efficacy signal, but the shape of the curve does not exclude the possibility that 90 mg retains clinically meaningful efficacy with a substantially improved toxicity profile \u2014 particularly for EOPE, CPK elevation, and hypertension, all of which showed dose-response relationships (Table 16/54). Under Project Optimus, this is a genuine gap: the sponsor selected 180 mg as the target dose without a formal non-inferiority test against 90 mg. However, this is not a blocking deficiency because: (a) the 180 mg ORR of 53% is the primary efficacy anchor for accelerated approval and is not in dispute; (b) the dose-optimization question is prospectively addressable in Study 301's SAP via a pre-specified exposure-stratified ORR analysis, as proposed in Round 3; and (c) the labeled step-up regimen with the Day-7 pulmonary gate already embeds a de facto 90 mg-only default for patients who cannot tolerate escalation. The organ-impairment and CYP3A4 DDI gaps remain non-blocking because the sponsor committed to PMRs, and interim labeling restrictions (avoid strong CYP3A4 inhibitors/inducers; no dose recommendation for moderate-severe hepatic or severe renal impairment) adequately communicate uncertainty to prescribers. The food effect (high-fat meal reduces Cmax ~13%, AUC minimally affected) is not clinically consequential and does not require a fasting restriction. QT risk is low given hERG IC50 >10 \u00b5M and no QTcB prolongation in monkeys or clinical QT-IRT review. No new information from the debate changes these assessments. The remaining split on Study 301's dynamic N-expansion formula is a biostatistics/regulatory matter and does not affect my Clinical Pharmacology position."
+      },
+      {
+        "domain": "biostatistics",
+        "position": "conditional",
+        "confidence": 0.72,
+        "summary": "From a biostatistics perspective, the pivotal evidence for brigatinib rests on a single-arm trial (ALTA, Arm B, n=110) with a 53% IRC-assessed confirmed ORR and ~14-month median DoR \u2014 a meaningful signal in a high-unmet-need population. The accelerated approval pathway is appropriate for this endpoint. However, the confirmatory PMR (Study AP26113-13-301) is a first-line RCT vs. crizotinib that cannot verify benefit in the labeled post-crizotinib population, creating a structural gap in the evidentiary chain for conversion to regular approval. The debate produced meaningful convergence on a registry/external-control design with IPTW as primary estimand, one-sided alpha=0.10, HR \u22640.75 anchor, and approval-order embedding of the SAP \u2014 all of which I accept. My dynamic N-expansion formula (mandatory registry expansion if effective-sample-size ratio from IPTW weight diagnostics falls below a pre-specified floor) remains unresolved with Regulatory and Clinical but is a technical safeguard, not a blocking issue at the time of initial approval. The EOPE labeling resolution (Day-7 gate, Grade \u22653 permanent discontinuation) is statistically supportable. The unresolved 90 mg vs. 180 mg non-inferiority question is a real gap but addressable via the Study 301 SAP pre-specification as a PMR condition. On balance, the primary endpoint is valid, the effect size is robust, and the deficiencies are reviewable rather than blocking at the accelerated approval stage.",
+        "key_concerns": [
+          "Confirmatory PMR (Study 301) is a first-line RCT vs. crizotinib and cannot directly verify benefit in the labeled post-crizotinib population; registry/external-control design with IPTW must be finalized with a locked SAP (HR \u22640.75, one-sided alpha=0.10, informative-censoring handling, stabilized-weight truncation rules) embedded in the approval order before data submission \u2014 post-hoc threshold-setting remains non-waivable.",
+          "Dynamic N-expansion formula for registry confirmatory analysis: if the effective-sample-size ratio from interim IPTW weight diagnostics falls below a pre-specified floor, mandatory registry expansion must be triggered to preserve power to detect HR \u22640.75; this safeguard has not yet been accepted by Regulatory or Clinical and must be resolved in SAP negotiation.",
+          "90 mg vs. 180 mg dose non-inferiority: the dose-escalation regimen has never been formally tested for non-inferiority at the lower dose; Study 301 SAP must pre-specify an exposure-stratified ORR analysis with a labeled dose revision trigger if 90 mg proves non-inferior, per Clinical Pharmacology's Project Optimus argument.",
+          "Single-arm design of ALTA precludes direct estimation of treatment effect vs. any comparator; the 53% ORR is interpretable only against historical null rates and is subject to patient selection bias \u2014 this is inherent to the accelerated approval pathway and acceptable here but must be acknowledged in labeling uncertainty language.",
+          "Intracranial ORR subgroup (n=18 with measurable brain metastases in Arm B) is exploratory and underpowered; the ~67% intracranial ORR estimate carries wide CIs and should not be used as an independent efficacy claim without pre-specified confirmatory analysis."
+        ],
+        "deficiencies": [],
+        "key_rationale": "My pre-debate position was conditional, and it holds after the debate \u2014 but the basis has sharpened considerably. Three things changed or were reinforced: (1) The cross-disciplinary convergence on a registry/IPTW confirmatory design with approval-order-embedded SAP, HR \u22640.75 anchor, and one-sided alpha=0.10 substantially reduces the post-hoc threshold-setting risk I flagged as my primary concern. This is the most important shift \u2014 the confirmatory pathway now has enough pre-specified statistical structure to be credible, provided the SAP is finalized before data lock. (2) The 301 first-line design's inability to verify benefit in the post-crizotinib population remains a real deficiency, but all disciplines agree it is reviewable (not CRL-worthy) given the biological plausibility of the ALTA signal and the agreed-upon registry vehicle. I continue to flag this as a non-blocking Major Deficiency. (3) The 90 mg vs. 180 mg dose non-inferiority gap is a new statistical concern surfaced in Round 3: the dose-escalation regimen was never formally tested for non-inferiority at the lower dose, and the exposure-response data show a dose-response relationship for both efficacy and toxicity. This is addressable as a PMR SAP pre-specification in Study 301, not a CRL issue. My dynamic N-expansion formula for the registry confirmatory analysis remains technically necessary to ensure the HR \u22640.75 threshold is practically detectable after IPTW variance inflation, but its non-acceptance by Regulatory and Clinical does not rise to a blocking deficiency \u2014 it is a methodological refinement I will continue to advocate for in the SAP negotiation. The primary endpoint (IRC-assessed confirmed ORR, 53%, 95% CI approximately 43\u201363%) is statistically robust: the effect size is large, the CI excludes any historically plausible null rate for this population, sensitivity analyses with unconfirmed responses are consistent, and OSI resolved the IRC database integrity concern. No blocking statistical deficiency remains."
+      },
+      {
+        "domain": "cmc",
+        "position": "support",
+        "confidence": 0.91,
+        "summary": "From a CMC perspective, NDA 208772 for brigatinib (ALUNBRIG) presents a clean product quality profile. The multidisciplinary review explicitly states there are no identified CMC deficiencies: no novel excipients, no impurities of concern, no microbiology issues, and no facility inspection findings. The drug substance and drug product (30 mg and 90 mg oral tablets) have been reviewed by OPQ with no outstanding quality deficiencies noted. The debate across three rounds was entirely confined to clinical, statistical, and nonclinical safety domains \u2014 no CMC-relevant issues were raised or surfaced. My CMC position is therefore unchanged: the product quality bar is met for this NDA as submitted.",
+        "key_concerns": [
+          "No CMC-domain concerns identified in the review record or raised during the cross-functional debate.",
+          "Post-marketing: sponsor should ensure commercial-scale stability data continue to be submitted per ICH Q1 commitments, particularly for the 180 mg strength if introduced post-approval.",
+          "DDI-related manufacturing considerations (CYP2C8/CYP3A4 metabolism) are a clinical pharmacology matter, not a CMC deficiency."
+        ],
+        "deficiencies": [],
+        "key_rationale": "My initial CMC position was support, and nothing in the three rounds of debate altered it. The debate addressed: (1) confirmatory PMR design adequacy for accelerated approval conversion; (2) evidentiary sufficiency of single-arm ORR; and (3) EOPE risk mitigation and dose optimization. None of these touch CMC jurisdiction. The multidisciplinary review record is explicit that OPQ found no CMC deficiencies \u2014 no impurity control gaps, no stability failures, no process validation concerns, no facility inspection issues, and no novel excipient concerns. The bridging data for the 30 mg and 90 mg tablet strengths was agreed upon at the pre-NDA meeting. The manufacturing section received NAI-equivalent treatment. There is no basis in the record to introduce a CMC blocking deficiency, and doing so would be unsupported by the available data. The product quality dossier supports approval from a CMC standpoint."
+      }
+    ]
+  },
+  "eval": {
+    "case_id": "NDA208772",
+    "is_baseline": false,
+    "debate_rounds": 3,
+    "topology": "cdtl",
+    "predicted_action": "AcceleratedApproval",
+    "actual_action": "AcceleratedApproval",
+    "reg_exact": true,
+    "reg_binary": true,
+    "fidelity_matched": 1,
+    "fidelity_total": 1,
+    "fidelity_recall": 1.0,
+    "n_agents": 6,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 0,
+    "dose_optimization_raised": true,
+    "discordance": 0.18633899812498245
+  },
+  "baseline": {
+    "predicted_action": "AcceleratedApproval",
+    "major_deficiencies": [
+      {
+        "description": "Accelerated approval rests on a single-arm, non-comparative trial (ALTA Arm B, n=110) with ORR/DoR as the sole efficacy endpoint. No OS or PFS data from a controlled comparison in the post-crizotinib setting are available at the time of submission. The surrogate endpoint has not yet been shown to reasonably predict clinical benefit in this specific line of therapy, and the confirmatory PMR trial (AP26113-13-301) is still ongoing. The evidentiary basis is therefore contingent on timely verification of clinical benefit.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "IRC audit trail integrity: OSI identified post-hoc changes to the imaging database that raised material questions about the reliability of the IRC-confirmed ORR \u2014 the primary efficacy endpoint. Although the sponsor resolved the discrepancy prior to the action date through additional submissions, the episode represents a data reliability concern of sufficient gravity that it required independent regulatory investigation. The adequacy of the resolution must be formally documented and reflected in labeling and the confirmatory PMR framework.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Early-onset pulmonary events (EOPE): Grade 3\u20134 pulmonary adverse events occurring within the first 9 days of treatment (incidence ~3%) and an overall pneumonitis/ILD rate of ~5.5% constitute a potentially life-threatening, on-target toxicity signal. The mechanism, predictive risk factors, and optimal clinical management algorithm are not fully characterized. This requires prominent Boxed Warning consideration, mandatory dose-interruption/discontinuation guidance, and a structured pharmacovigilance plan \u2014 the adequacy of which must be confirmed before approval.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Dose optimization: The 90 mg \u2192 180 mg step-up regimen was selected on the basis of tolerability data from a non-randomized Phase 1/2 study without a formal randomized dose-optimization trial (Project Optimus standard). Exposure-response analyses are supportive but not definitive. The minimum effective dose, the contribution of the step-up period to tolerability versus efficacy, and the optimal dose in special populations (hepatic/renal impairment, elderly) remain incompletely characterized. A prospective dose-optimization PMR or a rigorous exposure-response justification acceptable to the Division is required.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Clinical pharmacology gaps \u2014 special populations and DDI: Dose-adjustment recommendations for patients with moderate-to-severe hepatic impairment, severe renal impairment, and clinically relevant CYP3A4 inducer/inhibitor co-administration scenarios are not fully characterized at the time of submission. These gaps affect a meaningful segment of the intended patient population and create prescribing uncertainty. Addressed via PMRs/PMCs, but the adequacy and timelines of those commitments must be confirmed as a condition of approval.",
+        "source_domain": "generalist"
+      }
+    ]
+  },
+  "baseline_eval": {
+    "case_id": "NDA208772",
+    "is_baseline": true,
+    "debate_rounds": 0,
+    "topology": "cdtl",
+    "predicted_action": "AcceleratedApproval",
+    "actual_action": "AcceleratedApproval",
+    "reg_exact": true,
+    "reg_binary": true,
+    "fidelity_matched": 1,
+    "fidelity_total": 1,
+    "fidelity_recall": 1.0,
+    "n_agents": 1,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 0,
+    "dose_optimization_raised": true,
+    "discordance": 0.0
+  }
+}

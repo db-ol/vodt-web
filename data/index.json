@@ -1,15 +1,65 @@
 {
-  "generated_at": "2026-06-03T23:20:58",
+  "generated_at": "2026-06-05T02:01:17",
   "config": {
     "debate_rounds": 3,
-    "model": "claude-sonnet-4-6"
+    "model": "claude-sonnet-4-6",
+    "n_cases": 10
   },
   "cases": [
+    {
+      "case_id": "BLA761028",
+      "drug_name": "MVASI",
+      "actual_action": "Approval",
+      "predicted_action": "Approval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "BLA761210",
+      "drug_name": "RYBREVANT",
+      "actual_action": "AcceleratedApproval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "BLA761467",
+      "drug_name": "KEYTRUDA QLEX",
+      "actual_action": "Approval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
     {
       "case_id": "NDA204114",
       "drug_name": "MEKINIST",
       "actual_action": "Approval",
+      "predicted_action": "Approval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "NDA208772",
+      "drug_name": "ALUNBRIG",
+      "actual_action": "AcceleratedApproval",
       "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "NDA210868",
+      "drug_name": "LORBRENA",
+      "actual_action": "AcceleratedApproval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "NDA213721",
+      "drug_name": "GAVRETO",
+      "actual_action": "Approval",
+      "predicted_action": "AcceleratedApproval",
+      "source": "drugsfda"
+    },
+    {
+      "case_id": "NDA215179",
+      "drug_name": "PEMETREXED",
+      "actual_action": "CRL",
+      "predicted_action": "Approval",
       "source": "drugsfda"
     },
     {
@@ -23,26 +73,87 @@
       "case_id": "talazoparib-mcrpc-odac-reject",
       "drug_name": "Talzenna (talazoparib) + enzalutamide",
       "actual_action": "CRL",
-      "predicted_action": "AcceleratedApproval",
+      "predicted_action": "CRL",
       "source": "odac"
     }
   ],
   "summary": {
     "team": {
-      "n": 3,
-      "reg_exact": 0.3333333333333333,
-      "reg_binary": 0.6666666666666666,
-      "fidelity_recall": 0.3333333333333333,
-      "dose_opt_rate": 0.6666666666666666,
-      "mean_discordance": 0.0
+      "n": 10,
+      "reg_exact": 0.7,
+      "reg_binary": 0.9,
+      "fidelity_recall": 0.4,
+      "dose_opt_rate": 0.6,
+      "mean_discordance": 0.15894385095409264
     },
     "baseline": {
-      "n": 3,
-      "reg_exact": 0.3333333333333333,
-      "reg_binary": 0.6666666666666666,
-      "fidelity_recall": 0.0,
-      "dose_opt_rate": 0,
+      "n": 10,
+      "reg_exact": 0.7,
+      "reg_binary": 0.8,
+      "fidelity_recall": 1.0,
+      "dose_opt_rate": 1,
       "mean_discordance": 0.0
     }
-  }
+  },
+  "confusion": {
+    "Approval": {
+      "Approval": 2,
+      "AcceleratedApproval": 2,
+      "CRL": 0
+    },
+    "AcceleratedApproval": {
+      "Approval": 0,
+      "AcceleratedApproval": 4,
+      "CRL": 0
+    },
+    "CRL": {
+      "Approval": 1,
+      "AcceleratedApproval": 0,
+      "CRL": 1
+    }
+  },
+  "genre": {
+    "accuracy": 0.9,
+    "n": 10,
+    "passes": false,
+    "top_tokens": [
+      [
+        "applicant",
+        57.39
+      ],
+      [
+        "bla",
+        55.58
+      ],
+      [
+        "nda",
+        -39.48
+      ],
+      [
+        "sponsor",
+        -28.2
+      ],
+      [
+        "multi-disciplinary review",
+        22.43
+      ],
+      [
+        "advisory committee",
+        -20.36
+      ],
+      [
+        "briefing document",
+        -19.81
+      ],
+      [
+        "office of",
+        9.15
+      ]
+    ],
+    "note": "CONFOUNDED: outcome is near-perfectly separable by document genre \u2014 source all classes from the same genre before scaling."
+  },
+  "caveats": [
+    "n=10 paired cases: only large effects are detectable; report as a trend with wide CIs.",
+    "Document-genre confound: outcome is 90% separable by document style alone \u2014 regulatory-alignment results are confounded by genre."
+  ]
 }

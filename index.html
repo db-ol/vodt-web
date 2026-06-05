@@ -4,38 +4,66 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>VODT — Virtual Oncology Development Team</title>
-  <meta name="description" content="Multi-agent AI vs. single-agent baseline on real FDA oncology review decisions." />
+  <meta name="description" content="A role-based multi-agent system simulating an FDA oncology review team, scored against real FDA outcomes and a single-agent baseline." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site">
+  <header class="hero">
     <div class="wrap">
-      <h1>VODT — Virtual Oncology Development Team</h1>
-      <p class="tag">A role-based multi-agent system that simulates an FDA oncology review team and
-        predicts regulatory actions, compared against a single-agent baseline and the real FDA outcome.</p>
-      <p id="run-meta" class="meta"></p>
+      <div class="brand">
+        <span class="logo" aria-hidden="true">⬡</span>
+        <span class="kicker">Virtual Oncology Development Team</span>
+      </div>
+      <h1>Can a <em>team</em> of AI specialists review a drug like the FDA does?</h1>
+      <p class="tag">VODT simulates a multi-disciplinary FDA oncology review — six specialists, a moderated
+        debate, and a deterministic consensus — then scores its predicted regulatory action against the
+        <strong>real FDA outcome</strong> and a single-agent baseline.</p>
+      <div id="run-meta" class="chips"></div>
     </div>
   </header>
 
   <main class="wrap">
-    <section id="summary" class="card">
-      <h2>VCDT vs. single-agent baseline</h2>
-      <div id="summary-body"></div>
-      <p class="disclaimer">Illustrative on a small case set — demonstrates the harness and metrics, not a
-        powered study result.</p>
+    <div id="caveat" class="caveat" hidden></div>
+
+    <section class="card">
+      <div class="card-head">
+        <h2>Team vs. single-agent baseline</h2>
+        <span class="hint">higher is better, except discordance</span>
+      </div>
+      <div id="summary-body" class="loading">Loading results…</div>
     </section>
 
-    <section class="layout">
-      <nav id="case-list" class="card cases"></nav>
-      <article id="case-detail" class="card detail">
-        <p class="placeholder">Select a case to see the deliberation.</p>
-      </article>
+    <section class="grid2">
+      <div class="card">
+        <div class="card-head"><h2>Outcome confusion</h2><span class="hint">team prediction vs. actual</span></div>
+        <div id="confusion"></div>
+      </div>
+      <div class="card">
+        <div class="card-head"><h2>How VODT works</h2></div>
+        <ol class="pipeline">
+          <li><b>Blind review</b> — 6 specialists assess the redacted package independently.</li>
+          <li><b>Debate</b> — a moderator runs focused rounds on the disagreements.</li>
+          <li><b>Consensus</b> — a deterministic rule maps positions + blocking findings → action.</li>
+        </ol>
+        <p class="muted small">Baseline: one generalist agent through the same pipeline.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="section-title">Cases</h2>
+      <div class="layout">
+        <nav id="case-list" class="cases"></nav>
+        <article id="case-detail" class="card detail">
+          <p class="placeholder">Select a case to walk through the deliberation.</p>
+        </article>
+      </div>
     </section>
   </main>
 
-  <footer class="site">
+  <footer>
     <div class="wrap">
-      <span>Static results viewer · data exported by <code>vodt export-web</code></span>
+      <span>Static results viewer · snapshot exported by <code>vodt export-web</code> · no live model calls, no secrets.</span>
     </div>
   </footer>
 

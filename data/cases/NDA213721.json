@@ -1,0 +1,341 @@
+{
+  "meta": {
+    "case_id": "NDA213721",
+    "drug_name": "GAVRETO",
+    "indication": "\u2022 Risk of Impaired Wound Healing: Withhold GAVRETO for at least 5 GAVRETO is a kinase inhibitor indicated for treatment of: days prior to elective surgery. Do not administer for at least 2 weeks \u2022 Adult patients with metastatic rearranged during transfection (RET) following major surgery and until adequate wound healing. The safety of fusion-positive non-small cell lung cancer as detected by an FDA resumption of GAVRETO after resolution of wound healing approved test (NSCLC).1 (1.1) complication",
+    "nda_bla": "NDA213721",
+    "source": "drugsfda",
+    "source_urls": [
+      "http://www.accessdata.fda.gov/drugsatfda_docs/nda/2020/213721Orig1s000MultidisciplineR.pdf"
+    ]
+  },
+  "ground_truth": {
+    "actual_action": "Approval",
+    "cited_deficiencies": [],
+    "dose_decision": "Select patients for treatment with GAVRETO based on the presence of a RET To report SUSPECTED ADVERSE REACTIONS, contact Genentech at gene fusion or gene mutation. (2.1, 14) 1-888-835-2555 or FDA at 1-800-FDA-1088 or www.fda.gov/medwatch. The recommended dosage in adults and pediatric patients 12 years and older is ____________________ ____________________ DRUG INTERACTIONS 400 mg orally once daily on an empty stomach (no food intake for at least 2 \u2022 Strong CYP3A inhibitors: Avoid coadministration. (7.1) hours before and at least 1 hour after taking GAVRETO). (2.2) \u2022 Combined P-gp and Strong C"
+  },
+  "team": {
+    "predicted_action": "AcceleratedApproval",
+    "discordance": 0.0,
+    "aggregation_pattern": "conditional_consensus",
+    "aggregation_rationale": "mixed consensus (support=0.00, conditional=1.00, blockers=0) \u2014 non-blocking concerns warrant accelerated approval with PMRs.",
+    "per_agent_contribution": {
+      "regulatory": 0.0833,
+      "clinical": 0.0833,
+      "toxicology": 0.0833,
+      "clinical_pharmacology": 0.0833,
+      "biostatistics": 0.0833,
+      "cmc": 0.0833
+    },
+    "dose_recommendation": null,
+    "major_deficiencies": [],
+    "blind_positions": [
+      {
+        "domain": "regulatory",
+        "position": "conditional",
+        "confidence": 0.88,
+        "summary": "Pralsetinib (GAVRETO) NDA 213721 is a Type 1 NME seeking accelerated approval for adult patients with metastatic RET fusion-positive NSCLC as detected by an FDA-approved test. From a regulatory standpoint, the evidentiary package is adequate to support accelerated approval under 21 CFR 314.510 (Subpart H), but not traditional approval. The pivotal evidence derives from a single-arm, open-label, multi-cohort Phase 1/2 study (ARROW; BLU-667-1101) with ORR as the primary endpoint \u2014 a surrogate reasonably likely to predict clinical benefit in this biomarker-selected, life-threatening indication with high unmet need. The indication as recommended by FDA (narrowed from sponsor's proposed \"locally advanced or metastatic\" to \"metastatic,\" and restricted to adults) is well-supported by the data. Confirmatory trial commitments (AcceleRET Lung; ARROW continued follow-up) and a PMR for GI perforation/fistula risk are appropriate conditions. No blocking deficiency is identified in the regulatory domain; the non-blocking deficiencies are addressable through labeling, PMRs, and post-marketing commitments consistent with accelerated approval framework.",
+        "key_concerns": [
+          "Single-arm trial design without randomized comparator: ORR as surrogate endpoint is acceptable for accelerated approval under 21 CFR 314.510 but does not constitute substantial evidence of clinical benefit (OS/PFS improvement) required for traditional approval. Confirmatory randomized trial (AcceleRET Lung) is mandatory.",
+          "Small treatment-na\u00efve cohort (n=27): The 70% ORR in treatment-na\u00efve patients is compelling in magnitude but the sample size introduces substantial uncertainty in the point estimate. The CI (50, 86) is wide. This cohort alone would be insufficient for traditional approval; accelerated approval is the appropriate pathway.",
+          "Sponsor's proposed indication ('locally advanced or metastatic') is broader than the efficacy population studied (metastatic only). FDA's recommended narrowing to 'metastatic' is the correct regulatory action; the locally advanced population was not adequately studied and the label must reflect the actual studied population.",
+          "Absence of randomized survival data specific to RET fusion-positive NSCLC: No OS or PFS data from a controlled trial exist. The accelerated approval framework explicitly anticipates this gap, but the confirmatory trial PMR must be rigorously enforced.",
+          "Companion diagnostic (Oncomine Dx Target Test) contemporaneous review: Approval of pralsetinib is contingent on contemporaneous approval of the CDx by CDRH (sPMA P160045/S019). Any delay or non-approval of the CDx would create a labeling and patient selection problem.",
+          "GI perforation/fistula risk: Based on VEGFR pathway inhibition mechanism, a PMR to characterize this risk is appropriate and has been included. This is not a blocking deficiency but must be a condition of approval.",
+          "Post-marketing commitment enforcement: Blueprint's AcceleRET Lung randomized trial must be formally required as a PMR/PMC with defined milestones under 21 CFR 314.510(b) to verify clinical benefit. The accelerated approval is contingent on this commitment being met.",
+          "Selpercatinib precedent: The May 2020 accelerated approval of selpercatinib (RETEVMO) for the same indication establishes regulatory precedent supporting this pathway and the use of ORR as surrogate, but also raises the bar for the confirmatory trial requirement given that a second agent in the class will now be available."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical",
+        "position": "conditional",
+        "confidence": 0.88,
+        "summary": "Pralsetinib (GAVRETO) is a selective RET kinase inhibitor evaluated in the single-arm, open-label, multi-cohort ARROW study (BLU-667-1101) for adult patients with metastatic RET fusion-positive NSCLC. The primary efficacy analysis population comprises 114 patients: 27 treatment-na\u00efve and 87 previously platinum-treated. Confirmed ORR by BICR was 70% (95% CI 50\u201386) in treatment-na\u00efve patients (median DOR 9.0 months; 58% \u22656 months) and 57% (95% CI 46\u201368) in platinum-pretreated patients (median DOR not estimable; 80% \u22656 months). These response rates are large in magnitude, durable, and clinically meaningful in a biomarker-selected population with a life-threatening disease and no approved RET-directed therapy at the time of submission. The safety profile \u2014 including ILD/pneumonitis, hypertension, hepatotoxicity, and hemorrhage \u2014 is serious but manageable with labeling guidance and dose modification algorithms, consistent with the kinase inhibitor class. No randomized data exist, and the treatment-na\u00efve cohort is small (n=27), creating uncertainty about the full magnitude of benefit relative to modern first-line standards (platinum + pembrolizumab). These limitations are appropriate for accelerated approval with post-marketing verification requirements, not grounds for a Complete Response Letter. The clinical benefit-risk profile supports conditional (accelerated) approval for the indicated population.",
+        "key_concerns": [
+          "Single-arm trial design: no randomized comparator arm; ORR and DOR cannot be benchmarked against a concurrent control, introducing selection bias risk",
+          "Treatment-na\u00efve cohort is very small (n=27); the 70% ORR point estimate carries wide confidence intervals (50\u201386%) and median DOR of only 9.0 months with limited follow-up, making the magnitude of benefit relative to modern first-line chemo-immunotherapy (ORR 46\u201358%, mDOR ~11 months) uncertain",
+          "No overall survival data mature enough to confirm clinical benefit; OS is immature for both cohorts at the time of the primary analysis",
+          "Progression-free survival data are exploratory and not powered for formal inference in this single-arm context",
+          "CNS efficacy analysis is based on only 8 evaluable patients with measurable brain metastases; intracranial ORR point estimate must be interpreted with extreme caution",
+          "Accelerated approval is predicated on ORR as a surrogate reasonably likely to predict clinical benefit; confirmatory randomized trial (AcceleRET Lung, BLU-667-2303) is ongoing but not yet reported \u2014 post-marketing verification is essential",
+          "Selpercatinib (another selective RET inhibitor) received accelerated approval in May 2020 for the same indication; comparative efficacy and safety between the two agents is unknown, and clinicians will need guidance",
+          "Safety: ILD/pneumonitis (any grade in ~12% of patients at 400 mg QD; leading cause of permanent discontinuation at 1.8%), hypertension, hepatotoxicity, and hemorrhagic events require robust Warnings and Precautions and dose modification guidance in labeling",
+          "Wound healing impairment risk (VEGFR pathway inhibition) and potential GI perforation/fistula risk are class effects that lack a clear clinical signal in ARROW but warrant a PMR given the mechanism",
+          "Sponsor's proposed indication included 'locally advanced' NSCLC, but the primary efficacy analysis population is restricted to metastatic disease; FDA appropriately narrowed the indication to metastatic \u2014 this is clinically correct and should be reflected in final labeling"
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "toxicology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Pralsetinib (GAVRETO) is a selective RET kinase inhibitor with a well-characterized nonclinical safety profile evaluated in rats and cynomolgus monkeys up to 13 weeks. The nonclinical package is generally adequate for an NME seeking accelerated approval in a life-threatening oncology indication under ICH S9 principles. Key nonclinical toxicities (anemia, hepatotoxicity, hyperphosphatemia, hypertension, pneumonitis, embryo-fetal toxicity, reproductive organ findings) translate coherently to the observed clinical safety profile and are addressable through labeling, dose modification guidance, and a targeted PMR for GI perforation/fistula risk. No single nonclinical finding constitutes a blocking deficiency for the adult metastatic NSCLC indication as sought. The dose selection rationale (400 mg QD) is partially supported by exposure-response data but carries a Project Optimus-relevant gap in that no formal lower-dose optimization arm was studied; this is a reviewable concern addressable post-marketing. Overall, the nonclinical safety data support accelerated approval with appropriate labeling and PMRs.",
+        "key_concerns": [
+          "Project Optimus / dose optimization: The 400 mg QD dose was selected as the recommended Phase 2 dose (RP2D) from a dose-escalation design aimed at identifying the MTD/RP2D, without a formal randomized dose-optimization study comparing lower doses for equivalent efficacy with reduced toxicity. Exposure-response analyses show dose-dependent Grade 3+ AEs (anemia, pneumonia), and 60% of patients required dose interruptions and 36% required dose reductions, suggesting the approved dose may not represent the optimal therapeutic index. This is a Project Optimus concern but not blocking under current ICH S9 precedent for advanced cancer indications.",
+          "Embryo-fetal toxicity: 100% post-implantation loss at \u226520 mg/kg in rats (approximately 1.5\u00d7 clinical AUC) and malformations at \u22655 mg/kg (approximately 0.2\u00d7 clinical AUC). This is a serious reproductive risk requiring prominent labeling (Warnings and Precautions, Use in Specific Populations) and contraception guidance. The very low safety margin for embryo-fetal toxicity (malformations at 0.2\u00d7 clinical AUC) is notable and must be clearly communicated.",
+          "Reproductive organ toxicity: Degeneration of corpus luteum, testicular tubular degeneration/atrophy, and reduced sperm in epididymis at approximately 0.9\u00d7 clinical AUC in 13-week rat study. Fertility studies were not conducted (acceptable under ICH S9 for advanced cancer indication), but labeling must reflect potential impairment of male and female fertility.",
+          "GI perforation/fistula risk: Cynomolgus monkeys showed intussusception, extensive GI inflammation, ulceration, and bacterial sepsis/death at \u226515 mg/kg (\u22651.1\u00d7 clinical AUC) in the 28-day study. Clinical signal was not clearly established in ARROW, but the mechanistic basis (VEGFR2 inhibition) and nonclinical severity justify a PMR to characterize this risk prospectively.",
+          "Off-target kinase inhibition and hyperphosphatemia: FGFR1 inhibition at clinically relevant concentrations is supported by nonclinical data and correlates with hyperphosphatemia observed clinically (\u226520% lab abnormality). Tissue mineralization was observed in animals. Phosphate monitoring and management guidance must be included in labeling.",
+          "Bone and dental findings in rats: Increased physeal thickness and incisor degeneration at approximately 0.9\u00d7 clinical AUC without full recovery in 28-day studies. While unlikely relevant to adult patients with closed growth plates, these findings are pertinent to potential pediatric use and must be reflected in Section 8.4 of labeling.",
+          "Cardiovascular safety pharmacology: Single-dose pralsetinib caused increased blood pressure with decreased heart rate in rats, consistent with VEGFR2 inhibition. Hypertension is a clinically observed adverse reaction (\u226520% incidence). No QTc prolongation signal in 13-week monkey study or hERG assay, which is reassuring. Hypertension management guidance in labeling is appropriate and sufficient.",
+          "Lung findings in nonclinical studies: Macrophage aggregation in lungs of both species; pleural fibrosis and bronchioalveolar hyperplasia/metaplasia in monkeys at 28-day study. These findings are mechanistically consistent with the clinical ILD/pneumonitis signal and support the Warnings and Precautions inclusion.",
+          "CYP3A induction: Pralsetinib identified as a CYP3A inducer by the clinical pharmacology team, which has implications for hormonal contraceptive efficacy. Non-hormonal contraception recommendation for females of reproductive potential is appropriate and must be clearly labeled.",
+          "Absence of carcinogenicity and fertility studies: Acceptable under ICH S9 for the advanced cancer indication, but should be noted as standard limitations of the nonclinical package."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Pralsetinib (GAVRETO) 400 mg QD demonstrates a well-characterized PK/PD profile with exposure-response analyses supporting the proposed dose for metastatic RET fusion-positive NSCLC. The popPK model is adequately developed and validated, and E-R analyses for both efficacy (ORR, PFS) and safety (Grade 3+ AEs, anemia, pneumonia) are presented. Several outstanding DDI studies and PBPK analyses are identified in the review (Table 12, Table 13) but are appropriately deferred as post-marketing requirements given the clinical context. Organ-impairment dosing recommendations are supported by popPK covariate analyses. The dose rationale for 400 mg QD is supported by the exposure-efficacy plateau and the dose-escalation data from ARROW. Key residual uncertainties \u2014 particularly dedicated DDI studies for strong CYP3A/P-gp inhibitors and PBPK-based predictions for hepatic/renal impairment \u2014 are manageable through labeling and PMRs rather than constituting blocking deficiencies. On balance, the clinical pharmacology package meets the evidentiary bar for accelerated approval with conditions.",
+        "key_concerns": [
+          "Outstanding dedicated DDI studies for combined strong CYP3A and P-gp inhibitors/inducers have not been completed at time of NDA submission; interim labeling dose-modification recommendations are based on PBPK modeling rather than clinical data (Table 12).",
+          "Outstanding PBPK modeling and simulation analyses for hepatic and renal impairment subgroups have not been finalized; popPK covariate analyses provide supportive but indirect evidence (Table 13, Figures 8-9).",
+          "Pralsetinib is identified as a CYP3A inducer, which has clinically important implications for co-administered hormonal contraceptives and other narrow-therapeutic-index CYP3A substrates; the magnitude of induction is not fully characterized by a dedicated clinical study.",
+          "Exposure-response analyses for efficacy (Figure 10, Figure 11-12) show a positive trend but are based on a single-arm trial with limited sample size, particularly in the treatment-naive cohort (n=27), making the E-R relationship uncertain at the lower exposure range.",
+          "Food effect: the proposed dosing on an empty stomach (\u22652 hours before, \u22651 hour after) is based on PK data but the clinical consequence of inadvertent fed-state dosing on efficacy/safety is not fully characterized.",
+          "Dose optimization (Project Optimus considerations): no formal dose-ranging comparison between 400 mg and lower doses (e.g., 200 or 300 mg) was conducted; the dose-escalation data from ARROW support 400 mg as the RP2D, but the exposure-response plateau for efficacy versus the steeper exposure-toxicity relationship at higher exposures warrants post-marketing evaluation of whether a lower dose could maintain efficacy with improved tolerability, given that 60% of patients required dose interruptions and 36% required dose reductions.",
+          "Bioanalytical method for pralsetinib plasma quantification (Table 68) appears adequately validated; no major bioanalytical deficiencies identified.",
+          "QTc: pralsetinib did not inhibit hERG in vitro at relevant concentrations and no QTc prolongation was observed in the 13-week monkey study; a thorough QT study does not appear to have been conducted as a standalone study \u2014 this should be confirmed or addressed via concentration-QTc analysis from the clinical dataset."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "biostatistics",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Pralsetinib (GAVRETO) NDA 213721 is supported by a single-arm, open-label, multi-cohort expansion study (ARROW/BLU-667-1101) using overall response rate (ORR) and duration of response (DOR) as the primary efficacy endpoints under the accelerated approval pathway. From a biostatistics perspective, the primary evidence is statistically interpretable and the effect sizes are clinically meaningful in the context of a rare, biomarker-selected, life-threatening oncology indication. However, several statistical limitations \u2014 most notably the very small treatment-na\u00efve cohort (n=27), absence of a randomized control arm, immature DOR data in the treatment-na\u00efve population, and uncontrolled multiplicity across multiple subgroup and secondary analyses \u2014 introduce material uncertainty. These limitations are consistent with accelerated approval rather than regular approval, and the review team has appropriately framed the application accordingly. No single statistical deficiency rises to the level of a blocking Complete Response Letter issue given the accelerated approval framework, the magnitude of the ORR signal, and the pre-specified BICR-assessed primary endpoint. A conditional position (accelerated approval with confirmatory trial PMR/PMC) is the appropriate biostatistics recommendation.",
+        "key_concerns": [
+          "Small treatment-na\u00efve cohort (n=27): ORR of 70% (95% CI: 50, 86) carries a 36-percentage-point CI width, making the point estimate imprecise. The lower bound of 50% is still clinically meaningful, but the estimate is fragile to even modest patient-level changes.",
+          "Absence of a randomized control arm: Single-arm design precludes causal inference on comparative effectiveness. ORR in a single-arm trial is subject to patient selection bias, particularly in a molecularly selected, rare subgroup enrolled across 53 sites with heterogeneous local testing methods.",
+          "Immature DOR in treatment-na\u00efve cohort: Median DOR of 9.0 months (95% CI: 6.3, NE) with only 58% of responders achieving DOR \u22656 months and the upper CI bound not estimable reflects early data maturity. The DOR estimate is heavily censored and may not be stable.",
+          "Multiplicity not formally controlled across secondary and exploratory endpoints: CNS response rate (n=8 evaluable patients in platinum-treated cohort), disease control rate, PFS, OS, and subgroup ORRs were analyzed without a pre-specified multiplicity adjustment hierarchy that controls family-wise error rate. These results are hypothesis-generating only.",
+          "Single-arm ORR as surrogate endpoint: ORR is an endpoint 'reasonably likely to predict clinical benefit' under 21 CFR 314.510, but it is not a validated surrogate for OS in this specific RET fusion-positive NSCLC population. The accelerated approval framework appropriately acknowledges this uncertainty.",
+          "CNS efficacy analysis severely underpowered: Only 8 patients with measurable CNS metastases were evaluable in the platinum-treated cohort; 4 confirmed IC responses. This n is far too small to draw any reliable statistical inference; point estimates are highly unstable.",
+          "Heterogeneous enrollment and local RET testing: Patients were enrolled based on local RET fusion detection (tissue and/or blood), with retrospective central confirmation. Discordance between local and central testing could introduce misclassification bias in the efficacy-evaluable population, though the magnitude is not quantified in the review.",
+          "Informative censoring risk in DOR and PFS: In a single-arm oncology trial with ongoing enrollment and multiple data cuts (original NDA + 90-day update), censoring patterns for DOR and PFS may be non-random (e.g., patients discontinuing for toxicity censored before progression), potentially inflating DOR/PFS estimates.",
+          "Post-hoc and exploratory subgroup analyses: Subgroup ORR analyses by demographic characteristics (age, sex, race) and fusion partner type were conducted without pre-specified multiplicity control and should be considered exploratory only."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "cmc",
+        "position": "conditional",
+        "confidence": 0.72,
+        "summary": "From a CMC perspective, pralsetinib (GAVRETO, NDA 213721) is a small-molecule kinase inhibitor presented as 100 mg oral capsules. The case package contains limited but reviewable CMC information. The key CMC finding centers on four identified drug substance impurities whose proposed specification limits exceed ICH Q3A qualification thresholds; however, the Applicant has provided nonclinical toxicology qualification data (14-day and 28-day rat studies) to justify these limits, and the FDA CMC review team has accepted this justification as documented in Table 4. No facility inspection findings were flagged as CMC-blocking. Stability data were submitted per the Pre-NDA meeting agreement (updated CMC stability data submitted April 22, 2020). No biologics-specific concerns (aggregation, DAR drift, cold-chain) apply to this small-molecule NDA. On balance, the CMC package appears adequate to support accelerated approval, with standard post-marketing commitments for ongoing stability and process validation data as expected for a new molecular entity at this stage of development.",
+        "key_concerns": [
+          "Four drug substance impurities with proposed specification limits above ICH Q3A qualification thresholds (0.15% threshold for daily doses >2 g/day, or 0.05% for genotoxic impurities); limits are justified by nonclinical rat qualification studies but long-term clinical exposure data at commercial scale are not yet available.",
+          "Stability data package was supplemented post-submission (April 22, 2020 update per Pre-NDA agreement); the adequacy of the full ICH Q1-compliant stability dataset across all proposed storage conditions and shelf-life periods cannot be fully confirmed from the case package summary alone.",
+          "Process validation and commercial-scale manufacturing comparability data are not explicitly discussed in the case package; for an NME at initial approval, confirmatory process validation data at commercial scale should be committed to as a PMC/PMR.",
+          "The case package does not explicitly confirm the outcome of any CMC-focused facility inspection (OPQ reviewers are listed but no facility inspection NAI/VAI/OAI designation is provided for the drug substance or drug product manufacturing sites).",
+          "Impurity control strategy relies on nonclinical qualification studies of up to 28 days in rats; for a chronically administered oncology drug, longer-term qualification or clinical monitoring data would strengthen the control strategy, particularly for impurities at levels approaching or exceeding ICH Q3A thresholds."
+        ],
+        "deficiencies": [
+          {
+            "description": "Four drug substance impurities are proposed at specification limits exceeding ICH Q3A qualification thresholds. While nonclinical rat studies (14-day and 28-day) have been submitted to qualify these limits, the qualification studies are of limited duration relative to the intended chronic clinical use. The FDA CMC team has accepted the justification as presented in Table 4, indicating this is a reviewable rather than blocking issue, but ongoing monitoring and potential tightening of limits post-approval should be required as a PMR.",
+            "blocking": false
+          },
+          {
+            "description": "Stability data were submitted as a post-submission update (April 22, 2020) per Pre-NDA meeting agreement. The case package does not provide explicit confirmation that a full ICH Q1-compliant stability dataset (including accelerated and long-term data at proposed storage conditions through the full proposed shelf life) has been reviewed and found adequate. If the stability dataset is incomplete at the time of approval action, this could constitute a deficiency requiring resolution prior to approval.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      }
+    ],
+    "debate_rounds": [],
+    "final_positions": [
+      {
+        "domain": "regulatory",
+        "position": "conditional",
+        "confidence": 0.88,
+        "summary": "Pralsetinib (GAVRETO) NDA 213721 is a Type 1 NME seeking accelerated approval for adult patients with metastatic RET fusion-positive NSCLC as detected by an FDA-approved test. From a regulatory standpoint, the evidentiary package is adequate to support accelerated approval under 21 CFR 314.510 (Subpart H), but not traditional approval. The pivotal evidence derives from a single-arm, open-label, multi-cohort Phase 1/2 study (ARROW; BLU-667-1101) with ORR as the primary endpoint \u2014 a surrogate reasonably likely to predict clinical benefit in this biomarker-selected, life-threatening indication with high unmet need. The indication as recommended by FDA (narrowed from sponsor's proposed \"locally advanced or metastatic\" to \"metastatic,\" and restricted to adults) is well-supported by the data. Confirmatory trial commitments (AcceleRET Lung; ARROW continued follow-up) and a PMR for GI perforation/fistula risk are appropriate conditions. No blocking deficiency is identified in the regulatory domain; the non-blocking deficiencies are addressable through labeling, PMRs, and post-marketing commitments consistent with accelerated approval framework.",
+        "key_concerns": [
+          "Single-arm trial design without randomized comparator: ORR as surrogate endpoint is acceptable for accelerated approval under 21 CFR 314.510 but does not constitute substantial evidence of clinical benefit (OS/PFS improvement) required for traditional approval. Confirmatory randomized trial (AcceleRET Lung) is mandatory.",
+          "Small treatment-na\u00efve cohort (n=27): The 70% ORR in treatment-na\u00efve patients is compelling in magnitude but the sample size introduces substantial uncertainty in the point estimate. The CI (50, 86) is wide. This cohort alone would be insufficient for traditional approval; accelerated approval is the appropriate pathway.",
+          "Sponsor's proposed indication ('locally advanced or metastatic') is broader than the efficacy population studied (metastatic only). FDA's recommended narrowing to 'metastatic' is the correct regulatory action; the locally advanced population was not adequately studied and the label must reflect the actual studied population.",
+          "Absence of randomized survival data specific to RET fusion-positive NSCLC: No OS or PFS data from a controlled trial exist. The accelerated approval framework explicitly anticipates this gap, but the confirmatory trial PMR must be rigorously enforced.",
+          "Companion diagnostic (Oncomine Dx Target Test) contemporaneous review: Approval of pralsetinib is contingent on contemporaneous approval of the CDx by CDRH (sPMA P160045/S019). Any delay or non-approval of the CDx would create a labeling and patient selection problem.",
+          "GI perforation/fistula risk: Based on VEGFR pathway inhibition mechanism, a PMR to characterize this risk is appropriate and has been included. This is not a blocking deficiency but must be a condition of approval.",
+          "Post-marketing commitment enforcement: Blueprint's AcceleRET Lung randomized trial must be formally required as a PMR/PMC with defined milestones under 21 CFR 314.510(b) to verify clinical benefit. The accelerated approval is contingent on this commitment being met.",
+          "Selpercatinib precedent: The May 2020 accelerated approval of selpercatinib (RETEVMO) for the same indication establishes regulatory precedent supporting this pathway and the use of ORR as surrogate, but also raises the bar for the confirmatory trial requirement given that a second agent in the class will now be available."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical",
+        "position": "conditional",
+        "confidence": 0.88,
+        "summary": "Pralsetinib (GAVRETO) is a selective RET kinase inhibitor evaluated in the single-arm, open-label, multi-cohort ARROW study (BLU-667-1101) for adult patients with metastatic RET fusion-positive NSCLC. The primary efficacy analysis population comprises 114 patients: 27 treatment-na\u00efve and 87 previously platinum-treated. Confirmed ORR by BICR was 70% (95% CI 50\u201386) in treatment-na\u00efve patients (median DOR 9.0 months; 58% \u22656 months) and 57% (95% CI 46\u201368) in platinum-pretreated patients (median DOR not estimable; 80% \u22656 months). These response rates are large in magnitude, durable, and clinically meaningful in a biomarker-selected population with a life-threatening disease and no approved RET-directed therapy at the time of submission. The safety profile \u2014 including ILD/pneumonitis, hypertension, hepatotoxicity, and hemorrhage \u2014 is serious but manageable with labeling guidance and dose modification algorithms, consistent with the kinase inhibitor class. No randomized data exist, and the treatment-na\u00efve cohort is small (n=27), creating uncertainty about the full magnitude of benefit relative to modern first-line standards (platinum + pembrolizumab). These limitations are appropriate for accelerated approval with post-marketing verification requirements, not grounds for a Complete Response Letter. The clinical benefit-risk profile supports conditional (accelerated) approval for the indicated population.",
+        "key_concerns": [
+          "Single-arm trial design: no randomized comparator arm; ORR and DOR cannot be benchmarked against a concurrent control, introducing selection bias risk",
+          "Treatment-na\u00efve cohort is very small (n=27); the 70% ORR point estimate carries wide confidence intervals (50\u201386%) and median DOR of only 9.0 months with limited follow-up, making the magnitude of benefit relative to modern first-line chemo-immunotherapy (ORR 46\u201358%, mDOR ~11 months) uncertain",
+          "No overall survival data mature enough to confirm clinical benefit; OS is immature for both cohorts at the time of the primary analysis",
+          "Progression-free survival data are exploratory and not powered for formal inference in this single-arm context",
+          "CNS efficacy analysis is based on only 8 evaluable patients with measurable brain metastases; intracranial ORR point estimate must be interpreted with extreme caution",
+          "Accelerated approval is predicated on ORR as a surrogate reasonably likely to predict clinical benefit; confirmatory randomized trial (AcceleRET Lung, BLU-667-2303) is ongoing but not yet reported \u2014 post-marketing verification is essential",
+          "Selpercatinib (another selective RET inhibitor) received accelerated approval in May 2020 for the same indication; comparative efficacy and safety between the two agents is unknown, and clinicians will need guidance",
+          "Safety: ILD/pneumonitis (any grade in ~12% of patients at 400 mg QD; leading cause of permanent discontinuation at 1.8%), hypertension, hepatotoxicity, and hemorrhagic events require robust Warnings and Precautions and dose modification guidance in labeling",
+          "Wound healing impairment risk (VEGFR pathway inhibition) and potential GI perforation/fistula risk are class effects that lack a clear clinical signal in ARROW but warrant a PMR given the mechanism",
+          "Sponsor's proposed indication included 'locally advanced' NSCLC, but the primary efficacy analysis population is restricted to metastatic disease; FDA appropriately narrowed the indication to metastatic \u2014 this is clinically correct and should be reflected in final labeling"
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "toxicology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Pralsetinib (GAVRETO) is a selective RET kinase inhibitor with a well-characterized nonclinical safety profile evaluated in rats and cynomolgus monkeys up to 13 weeks. The nonclinical package is generally adequate for an NME seeking accelerated approval in a life-threatening oncology indication under ICH S9 principles. Key nonclinical toxicities (anemia, hepatotoxicity, hyperphosphatemia, hypertension, pneumonitis, embryo-fetal toxicity, reproductive organ findings) translate coherently to the observed clinical safety profile and are addressable through labeling, dose modification guidance, and a targeted PMR for GI perforation/fistula risk. No single nonclinical finding constitutes a blocking deficiency for the adult metastatic NSCLC indication as sought. The dose selection rationale (400 mg QD) is partially supported by exposure-response data but carries a Project Optimus-relevant gap in that no formal lower-dose optimization arm was studied; this is a reviewable concern addressable post-marketing. Overall, the nonclinical safety data support accelerated approval with appropriate labeling and PMRs.",
+        "key_concerns": [
+          "Project Optimus / dose optimization: The 400 mg QD dose was selected as the recommended Phase 2 dose (RP2D) from a dose-escalation design aimed at identifying the MTD/RP2D, without a formal randomized dose-optimization study comparing lower doses for equivalent efficacy with reduced toxicity. Exposure-response analyses show dose-dependent Grade 3+ AEs (anemia, pneumonia), and 60% of patients required dose interruptions and 36% required dose reductions, suggesting the approved dose may not represent the optimal therapeutic index. This is a Project Optimus concern but not blocking under current ICH S9 precedent for advanced cancer indications.",
+          "Embryo-fetal toxicity: 100% post-implantation loss at \u226520 mg/kg in rats (approximately 1.5\u00d7 clinical AUC) and malformations at \u22655 mg/kg (approximately 0.2\u00d7 clinical AUC). This is a serious reproductive risk requiring prominent labeling (Warnings and Precautions, Use in Specific Populations) and contraception guidance. The very low safety margin for embryo-fetal toxicity (malformations at 0.2\u00d7 clinical AUC) is notable and must be clearly communicated.",
+          "Reproductive organ toxicity: Degeneration of corpus luteum, testicular tubular degeneration/atrophy, and reduced sperm in epididymis at approximately 0.9\u00d7 clinical AUC in 13-week rat study. Fertility studies were not conducted (acceptable under ICH S9 for advanced cancer indication), but labeling must reflect potential impairment of male and female fertility.",
+          "GI perforation/fistula risk: Cynomolgus monkeys showed intussusception, extensive GI inflammation, ulceration, and bacterial sepsis/death at \u226515 mg/kg (\u22651.1\u00d7 clinical AUC) in the 28-day study. Clinical signal was not clearly established in ARROW, but the mechanistic basis (VEGFR2 inhibition) and nonclinical severity justify a PMR to characterize this risk prospectively.",
+          "Off-target kinase inhibition and hyperphosphatemia: FGFR1 inhibition at clinically relevant concentrations is supported by nonclinical data and correlates with hyperphosphatemia observed clinically (\u226520% lab abnormality). Tissue mineralization was observed in animals. Phosphate monitoring and management guidance must be included in labeling.",
+          "Bone and dental findings in rats: Increased physeal thickness and incisor degeneration at approximately 0.9\u00d7 clinical AUC without full recovery in 28-day studies. While unlikely relevant to adult patients with closed growth plates, these findings are pertinent to potential pediatric use and must be reflected in Section 8.4 of labeling.",
+          "Cardiovascular safety pharmacology: Single-dose pralsetinib caused increased blood pressure with decreased heart rate in rats, consistent with VEGFR2 inhibition. Hypertension is a clinically observed adverse reaction (\u226520% incidence). No QTc prolongation signal in 13-week monkey study or hERG assay, which is reassuring. Hypertension management guidance in labeling is appropriate and sufficient.",
+          "Lung findings in nonclinical studies: Macrophage aggregation in lungs of both species; pleural fibrosis and bronchioalveolar hyperplasia/metaplasia in monkeys at 28-day study. These findings are mechanistically consistent with the clinical ILD/pneumonitis signal and support the Warnings and Precautions inclusion.",
+          "CYP3A induction: Pralsetinib identified as a CYP3A inducer by the clinical pharmacology team, which has implications for hormonal contraceptive efficacy. Non-hormonal contraception recommendation for females of reproductive potential is appropriate and must be clearly labeled.",
+          "Absence of carcinogenicity and fertility studies: Acceptable under ICH S9 for the advanced cancer indication, but should be noted as standard limitations of the nonclinical package."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "conditional",
+        "confidence": 0.78,
+        "summary": "Pralsetinib (GAVRETO) 400 mg QD demonstrates a well-characterized PK/PD profile with exposure-response analyses supporting the proposed dose for metastatic RET fusion-positive NSCLC. The popPK model is adequately developed and validated, and E-R analyses for both efficacy (ORR, PFS) and safety (Grade 3+ AEs, anemia, pneumonia) are presented. Several outstanding DDI studies and PBPK analyses are identified in the review (Table 12, Table 13) but are appropriately deferred as post-marketing requirements given the clinical context. Organ-impairment dosing recommendations are supported by popPK covariate analyses. The dose rationale for 400 mg QD is supported by the exposure-efficacy plateau and the dose-escalation data from ARROW. Key residual uncertainties \u2014 particularly dedicated DDI studies for strong CYP3A/P-gp inhibitors and PBPK-based predictions for hepatic/renal impairment \u2014 are manageable through labeling and PMRs rather than constituting blocking deficiencies. On balance, the clinical pharmacology package meets the evidentiary bar for accelerated approval with conditions.",
+        "key_concerns": [
+          "Outstanding dedicated DDI studies for combined strong CYP3A and P-gp inhibitors/inducers have not been completed at time of NDA submission; interim labeling dose-modification recommendations are based on PBPK modeling rather than clinical data (Table 12).",
+          "Outstanding PBPK modeling and simulation analyses for hepatic and renal impairment subgroups have not been finalized; popPK covariate analyses provide supportive but indirect evidence (Table 13, Figures 8-9).",
+          "Pralsetinib is identified as a CYP3A inducer, which has clinically important implications for co-administered hormonal contraceptives and other narrow-therapeutic-index CYP3A substrates; the magnitude of induction is not fully characterized by a dedicated clinical study.",
+          "Exposure-response analyses for efficacy (Figure 10, Figure 11-12) show a positive trend but are based on a single-arm trial with limited sample size, particularly in the treatment-naive cohort (n=27), making the E-R relationship uncertain at the lower exposure range.",
+          "Food effect: the proposed dosing on an empty stomach (\u22652 hours before, \u22651 hour after) is based on PK data but the clinical consequence of inadvertent fed-state dosing on efficacy/safety is not fully characterized.",
+          "Dose optimization (Project Optimus considerations): no formal dose-ranging comparison between 400 mg and lower doses (e.g., 200 or 300 mg) was conducted; the dose-escalation data from ARROW support 400 mg as the RP2D, but the exposure-response plateau for efficacy versus the steeper exposure-toxicity relationship at higher exposures warrants post-marketing evaluation of whether a lower dose could maintain efficacy with improved tolerability, given that 60% of patients required dose interruptions and 36% required dose reductions.",
+          "Bioanalytical method for pralsetinib plasma quantification (Table 68) appears adequately validated; no major bioanalytical deficiencies identified.",
+          "QTc: pralsetinib did not inhibit hERG in vitro at relevant concentrations and no QTc prolongation was observed in the 13-week monkey study; a thorough QT study does not appear to have been conducted as a standalone study \u2014 this should be confirmed or addressed via concentration-QTc analysis from the clinical dataset."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "biostatistics",
+        "position": "conditional",
+        "confidence": 0.82,
+        "summary": "Pralsetinib (GAVRETO) NDA 213721 is supported by a single-arm, open-label, multi-cohort expansion study (ARROW/BLU-667-1101) using overall response rate (ORR) and duration of response (DOR) as the primary efficacy endpoints under the accelerated approval pathway. From a biostatistics perspective, the primary evidence is statistically interpretable and the effect sizes are clinically meaningful in the context of a rare, biomarker-selected, life-threatening oncology indication. However, several statistical limitations \u2014 most notably the very small treatment-na\u00efve cohort (n=27), absence of a randomized control arm, immature DOR data in the treatment-na\u00efve population, and uncontrolled multiplicity across multiple subgroup and secondary analyses \u2014 introduce material uncertainty. These limitations are consistent with accelerated approval rather than regular approval, and the review team has appropriately framed the application accordingly. No single statistical deficiency rises to the level of a blocking Complete Response Letter issue given the accelerated approval framework, the magnitude of the ORR signal, and the pre-specified BICR-assessed primary endpoint. A conditional position (accelerated approval with confirmatory trial PMR/PMC) is the appropriate biostatistics recommendation.",
+        "key_concerns": [
+          "Small treatment-na\u00efve cohort (n=27): ORR of 70% (95% CI: 50, 86) carries a 36-percentage-point CI width, making the point estimate imprecise. The lower bound of 50% is still clinically meaningful, but the estimate is fragile to even modest patient-level changes.",
+          "Absence of a randomized control arm: Single-arm design precludes causal inference on comparative effectiveness. ORR in a single-arm trial is subject to patient selection bias, particularly in a molecularly selected, rare subgroup enrolled across 53 sites with heterogeneous local testing methods.",
+          "Immature DOR in treatment-na\u00efve cohort: Median DOR of 9.0 months (95% CI: 6.3, NE) with only 58% of responders achieving DOR \u22656 months and the upper CI bound not estimable reflects early data maturity. The DOR estimate is heavily censored and may not be stable.",
+          "Multiplicity not formally controlled across secondary and exploratory endpoints: CNS response rate (n=8 evaluable patients in platinum-treated cohort), disease control rate, PFS, OS, and subgroup ORRs were analyzed without a pre-specified multiplicity adjustment hierarchy that controls family-wise error rate. These results are hypothesis-generating only.",
+          "Single-arm ORR as surrogate endpoint: ORR is an endpoint 'reasonably likely to predict clinical benefit' under 21 CFR 314.510, but it is not a validated surrogate for OS in this specific RET fusion-positive NSCLC population. The accelerated approval framework appropriately acknowledges this uncertainty.",
+          "CNS efficacy analysis severely underpowered: Only 8 patients with measurable CNS metastases were evaluable in the platinum-treated cohort; 4 confirmed IC responses. This n is far too small to draw any reliable statistical inference; point estimates are highly unstable.",
+          "Heterogeneous enrollment and local RET testing: Patients were enrolled based on local RET fusion detection (tissue and/or blood), with retrospective central confirmation. Discordance between local and central testing could introduce misclassification bias in the efficacy-evaluable population, though the magnitude is not quantified in the review.",
+          "Informative censoring risk in DOR and PFS: In a single-arm oncology trial with ongoing enrollment and multiple data cuts (original NDA + 90-day update), censoring patterns for DOR and PFS may be non-random (e.g., patients discontinuing for toxicity censored before progression), potentially inflating DOR/PFS estimates.",
+          "Post-hoc and exploratory subgroup analyses: Subgroup ORR analyses by demographic characteristics (age, sex, race) and fusion partner type were conducted without pre-specified multiplicity control and should be considered exploratory only."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "cmc",
+        "position": "conditional",
+        "confidence": 0.72,
+        "summary": "From a CMC perspective, pralsetinib (GAVRETO, NDA 213721) is a small-molecule kinase inhibitor presented as 100 mg oral capsules. The case package contains limited but reviewable CMC information. The key CMC finding centers on four identified drug substance impurities whose proposed specification limits exceed ICH Q3A qualification thresholds; however, the Applicant has provided nonclinical toxicology qualification data (14-day and 28-day rat studies) to justify these limits, and the FDA CMC review team has accepted this justification as documented in Table 4. No facility inspection findings were flagged as CMC-blocking. Stability data were submitted per the Pre-NDA meeting agreement (updated CMC stability data submitted April 22, 2020). No biologics-specific concerns (aggregation, DAR drift, cold-chain) apply to this small-molecule NDA. On balance, the CMC package appears adequate to support accelerated approval, with standard post-marketing commitments for ongoing stability and process validation data as expected for a new molecular entity at this stage of development.",
+        "key_concerns": [
+          "Four drug substance impurities with proposed specification limits above ICH Q3A qualification thresholds (0.15% threshold for daily doses >2 g/day, or 0.05% for genotoxic impurities); limits are justified by nonclinical rat qualification studies but long-term clinical exposure data at commercial scale are not yet available.",
+          "Stability data package was supplemented post-submission (April 22, 2020 update per Pre-NDA agreement); the adequacy of the full ICH Q1-compliant stability dataset across all proposed storage conditions and shelf-life periods cannot be fully confirmed from the case package summary alone.",
+          "Process validation and commercial-scale manufacturing comparability data are not explicitly discussed in the case package; for an NME at initial approval, confirmatory process validation data at commercial scale should be committed to as a PMC/PMR.",
+          "The case package does not explicitly confirm the outcome of any CMC-focused facility inspection (OPQ reviewers are listed but no facility inspection NAI/VAI/OAI designation is provided for the drug substance or drug product manufacturing sites).",
+          "Impurity control strategy relies on nonclinical qualification studies of up to 28 days in rats; for a chronically administered oncology drug, longer-term qualification or clinical monitoring data would strengthen the control strategy, particularly for impurities at levels approaching or exceeding ICH Q3A thresholds."
+        ],
+        "deficiencies": [
+          {
+            "description": "Four drug substance impurities are proposed at specification limits exceeding ICH Q3A qualification thresholds. While nonclinical rat studies (14-day and 28-day) have been submitted to qualify these limits, the qualification studies are of limited duration relative to the intended chronic clinical use. The FDA CMC team has accepted the justification as presented in Table 4, indicating this is a reviewable rather than blocking issue, but ongoing monitoring and potential tightening of limits post-approval should be required as a PMR.",
+            "blocking": false
+          },
+          {
+            "description": "Stability data were submitted as a post-submission update (April 22, 2020) per Pre-NDA meeting agreement. The case package does not provide explicit confirmation that a full ICH Q1-compliant stability dataset (including accelerated and long-term data at proposed storage conditions through the full proposed shelf life) has been reviewed and found adequate. If the stability dataset is incomplete at the time of approval action, this could constitute a deficiency requiring resolution prior to approval.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      }
+    ]
+  },
+  "eval": {
+    "case_id": "NDA213721",
+    "is_baseline": false,
+    "debate_rounds": 3,
+    "topology": "cdtl",
+    "predicted_action": "AcceleratedApproval",
+    "actual_action": "Approval",
+    "reg_exact": false,
+    "reg_binary": true,
+    "fidelity_matched": 0,
+    "fidelity_total": 0,
+    "fidelity_recall": null,
+    "n_agents": 6,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 2,
+    "dose_optimization_raised": false,
+    "discordance": 0.0
+  },
+  "baseline": {
+    "predicted_action": "AcceleratedApproval",
+    "major_deficiencies": [
+      {
+        "description": "No randomized, controlled trial data for OS or PFS submitted at the time of NDA filing. The pivotal evidence rests entirely on single-arm ORR/DOR from ARROW \u2014 an uncontrolled surrogate endpoint package. While Accelerated Approval is appropriate, the absence of any randomized confirmatory data at submission means clinical benefit remains unverified. The AcceleRET Lung trial (BLUE-667-2303) is initiated but no interim or final data are available; a binding post-marketing commitment (PMC) to verify and describe clinical benefit is required before approval can be granted under 21 CFR 314.510.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Treatment-na\u00efve cohort is critically underpowered (n=27; 95% CI for ORR 50\u201386%; median DOR 9.0 months with only 58% of responders achieving DOR \u22656 months). This sample size is insufficient to support a treatment-na\u00efve sub-indication under regular approval and introduces substantial uncertainty into the benefit-risk assessment for first-line use. The indication must be explicitly scoped to the Accelerated Approval framework, and the confirmatory trial must enroll an adequate treatment-na\u00efve stratum to resolve this uncertainty.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Dedicated clinical drug-drug interaction studies with strong CYP3A/P-gp inhibitors and strong CYP3A inducers were not completed at the time of NDA submission. Dose-modification guidance for these clinically important interactions relies solely on PBPK modeling and simulation that has not been validated with empirical clinical pharmacokinetic data. Given that pralsetinib is a CYP3A substrate and is itself a CYP3A inducer, uncharacterized DDI exposure changes could meaningfully alter the efficacy-safety balance. Completion of these studies and full PBPK validation are required as post-marketing requirements (PMRs) with agreed-upon milestones; labeling must carry interim PBPK-derived guidance with explicit uncertainty language until clinical data are available.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Data integrity signal identified during OSI inspection at Site 2603: two patients had unscheduled imaging scans not submitted to BICR, and two deaths occurring prior to the data-lock date were not reported in the primary dataset. Although the sponsor resolved these findings, the pattern raises concerns about the reliability of the BICR-adjudicated ORR \u2014 the sole primary efficacy endpoint. A satisfactory written response addressing root cause, corrective and preventive actions (CAPA), and a sensitivity analysis re-adjudicating all affected patients must be submitted and reviewed prior to approval.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Co-approval of the companion diagnostic (Oncomine Dx Target Test, CDRH review) for RET fusion detection in NSCLC tissue is a prerequisite for approval of pralsetinib under the sought indication. If CDRH does not concurrently approve or clear the CDx, the indication as written \u2014 requiring detection by an FDA-approved companion diagnostic \u2014 cannot be supported, and the NDA cannot be approved as submitted.",
+        "source_domain": "generalist"
+      }
+    ]
+  },
+  "baseline_eval": {
+    "case_id": "NDA213721",
+    "is_baseline": true,
+    "debate_rounds": 0,
+    "topology": "cdtl",
+    "predicted_action": "AcceleratedApproval",
+    "actual_action": "Approval",
+    "reg_exact": false,
+    "reg_binary": true,
+    "fidelity_matched": 0,
+    "fidelity_total": 0,
+    "fidelity_recall": null,
+    "n_agents": 1,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 0,
+    "dose_optimization_raised": true,
+    "discordance": 0.0
+  }
+}

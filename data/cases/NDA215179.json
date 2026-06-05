@@ -1,0 +1,340 @@
+{
+  "meta": {
+    "case_id": "NDA215179",
+    "drug_name": "PEMETREXED",
+    "indication": "--------------------------- Pemetrexed Injection is a folate analog metabolic inhibitor indicated: severe and life-threatening bullous, blistering or exfoliating skin \u2022 in combination with pembrolizumab and platinum chemotherapy, for toxicity. (5.3) the initial treatment of patients with metastatic non-squamous non- \u2022 Interstitial Pneumonitis: Withhold for acute onset of new or progressive small cell lung cancer (NSCLC), with no EGFR or ALK genomic unexplained pulmonary symptoms. Permanently dis",
+    "nda_bla": "NDA215179",
+    "source": "drugsfda",
+    "source_urls": [
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215179Orig1s000MedR.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215179Orig1s000ClinPharmR.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215179Orig1s000PharmR.pdf",
+      "https://www.accessdata.fda.gov/drugsatfda_docs/nda/2024/215179Orig1s000ChemR.pdf"
+    ]
+  },
+  "ground_truth": {
+    "actual_action": "CRL",
+    "cited_deficiencies": [],
+    "dose_decision": ", Preparation for Administration (2.7) 11/2024 5.2) \u2022 Bullous and Exfoliative Skin Toxicity: Permanently discontinue for --------------------------INDICATIONS AND USAGE--------------------------- Pemetrexed Injection is a folate analog metabolic inhibitor indicated: severe and life-threatening bullous, blistering or exfoliating skin \u2022 in combination with pembrolizumab and platinum chemotherapy, for toxicity. (5.3) the initial treatment of patients with metastatic non-squamous non- \u2022 Interstitial Pneumonitis: Withhold for acute onset of new or progressive small cell lung cancer (NSCLC), with no"
+  },
+  "team": {
+    "predicted_action": "Approval",
+    "discordance": 0.0,
+    "aggregation_pattern": "clear_approval",
+    "aggregation_rationale": "support_fraction=1.00 \u2265 0.83, no blocking findings.",
+    "per_agent_contribution": {
+      "regulatory": 0.1667,
+      "clinical": 0.1667,
+      "toxicology": 0.1667,
+      "clinical_pharmacology": 0.1667,
+      "biostatistics": 0.1667,
+      "cmc": 0.1667
+    },
+    "dose_recommendation": "500 mg/m\u00b2 IV over 10 minutes on Day 1 of each 21-day cycle, consistent with the approved RLD (Alimta) dosing. No dose modification from the RLD regimen is warranted. Proposed labeling must include clear volume-based dosing calculation instructions specific to the 10 mg/mL ready-to-use concentration to prevent preparation errors relative to Alimta's 25 mg/mL post-reconstitution concentration. Project Optimus dose-optimization principles are acknowledged; however, because this is a 505(b)(2) application for an already-approved active moiety at an already-approved dose, dose optimization was addressed at the time of original Alimta approval and is not re-opened by this formulation-change submission.",
+    "major_deficiencies": [
+      {
+        "description": "Labeling inconsistency between the OPQ Executive Summary (which lists the pembrolizumab + platinum combination indication) and the final proposed labeling submitted in SD-042, which carves out that patent-protected indication. The regulatory record must be reconciled to confirm the final approval action is based solely on the carved-out indication set. Any residual inclusion of the pembrolizumab combination indication in any labeling component would constitute a blocking deficiency.",
+        "severity": "major",
+        "source_domain": "regulatory"
+      },
+      {
+        "description": "Medication error risk from the concentration and preparation difference between Shilpa's ready-to-use 10 mg/mL solution (transferred to an empty sterile IV bag) and Alimta's lyophilized powder reconstituted to 25 mg/mL then further diluted. Proposed labeling must unambiguously differentiate preparation and volume-based dosing instructions from those of the RLD to prevent clinically significant dosing errors. Adequacy of the labeling solution to this risk has not been confirmed as fully resolved across the clinical and regulatory record.",
+        "severity": "major",
+        "source_domain": "clinical"
+      },
+      {
+        "description": "The scientific bridge supporting the biowaiver under 21 CFR 320.22 and 320.24(b)(6) \u2014 including the physicochemical comparability demonstration, the role of the novel excipient L-cysteine HCl, and the concentration difference at point of administration (10 mg/mL vs. 25 mg/mL post-reconstitution for Alimta) \u2014 must be fully and explicitly documented in the administrative record. While OCP and OPQ have individually concurred, the cross-disciplinary adequacy of this bridge (spanning biopharmaceutics, clinical pharmacology, and CMC) must be confirmed as complete before the biowaiver can be treated as a resolved matter of record.",
+        "severity": "major",
+        "source_domain": "clinical_pharmacology"
+      },
+      {
+        "description": "Nonclinical safety confirmation for the novel excipient L-cysteine HCl (1 mg/mL; approximately 50\u2013100 mg per dose) and for leachables identified from the ready-to-use vial configuration over the 18-month shelf life must be formally documented as below ICH Q3C/Q3D thresholds. While the CMC resubmission resolved the prior CRL deficiency on leachables, the toxicology record must explicitly confirm that no identified leachable or the L-cysteine HCl excipient introduces a new nonclinical safety signal not covered by the RLD dossier.",
+        "severity": "major",
+        "source_domain": "toxicology"
+      },
+      {
+        "description": "The 18-month shelf-life and controlled room temperature storage condition must be explicitly and consistently reflected across all final approved labeling components (prescribing information, container labels, and carton labels). Any outstanding post-approval stability commitment that could affect the validity of the expiration dating period must be identified and resolved or formally conditioned prior to the approval action.",
+        "severity": "major",
+        "source_domain": "cmc"
+      }
+    ],
+    "blind_positions": [
+      {
+        "domain": "regulatory",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "NDA 215179 is a 505(b)(2) application by Shilpa Medicare Ltd. for Pemetrexed Injection (10 mg/mL ready-to-use solution) relying on FDA's prior findings of safety and efficacy for the Reference Listed Drug (RLD), Alimta\u00ae (pemetrexed disodium, NDA 021462). From a regulatory standpoint, the application pathway is appropriate: the sponsor correctly invokes 505(b)(2), proposes the same active moiety, dose, and route of administration as the RLD, and seeks the same approved indications (with the appropriate carve-out of the pembrolizumab combination indication that remains patent-protected as of the most recent review cycle). No new clinical efficacy or safety data are required under this pathway, and the evidentiary burden is met by reliance on the RLD's established record. The clinical, clinical pharmacology, and CMC disciplines have each independently found no blocking deficiencies within their domains. From a regulatory/approval-pathway perspective, the application is structurally sound and does not raise novel evidentiary concerns that would require an Accelerated Approval framework, AdComm referral, or a Complete Response Letter on regulatory grounds.",
+        "key_concerns": [
+          "Patent carve-out consistency: The most recent clinical review (SDN/34, May 2023) confirms the pembrolizumab + platinum combination indication has been carved out due to patent protection. The regulatory team must verify that the final proposed labeling submitted in SD-042 (April 2023) is fully consistent with this carve-out and does not inadvertently include or imply the patent-protected indication. Any residual inclusion would constitute a regulatory deficiency requiring correction before approval.",
+          "Biowaiver adequacy under 21 CFR 320.22 and 320.24(b)(6): The sponsor requests a waiver of in vivo bioequivalence studies. Clinical pharmacology has concurred that a biowaiver is appropriate given the IV route of administration and physicochemical comparability. The regulatory reviewer concurs that IV solutions administered at the same dose and rate are generally eligible for biowaivers per FDA guidance, but the scientific bridge (including the L-cysteine HCl excipient and the concentration difference: 10 mg/mL vs. 25 mg/mL post-reconstitution for Alimta) must be documented as adequate in the administrative record.",
+          "Formulation differences and excipient justification: Shilpa's product contains L-cysteine HCl (not present in Alimta) and differs in mannitol content (100 mg vs. 106 mg). While CMC has found these adequate, the regulatory record should confirm that the novel excipient does not raise safety signals that would require independent clinical evaluation beyond what the 505(b)(2) reliance package provides.",
+          "Ready-to-use vs. lyophilized powder \u2014 administration instructions and medication error risk: The product is a 10 mg/mL ready-to-use solution requiring transfer to an empty sterile IV bag, whereas Alimta is reconstituted to 25 mg/mL and then diluted. The different concentration and preparation steps create a potential for medication errors. Labeling must clearly differentiate the preparation instructions from those of Alimta, and the regulatory team should confirm that the ISMP/medication error risk has been adequately addressed in the proposed labeling.",
+          "Indication scope across review cycles: Early submissions (SDN/1, June 2021) included the pembrolizumab combination indication; later submissions carved it out. The regulatory team must confirm that the final approval action is based on the carved-out indication set and that no inconsistency exists between the OPQ Executive Summary (which lists the pembrolizumab indication) and the final approved labeling \u2014 this discrepancy in the CMC Executive Summary should be reconciled.",
+          "18-month shelf-life and stability-based approval conditions: CMC recommends an 18-month expiration dating period. The regulatory team should confirm this is reflected in the final approved labeling and container/carton labels, and that no post-approval stability commitments remain outstanding that would affect the approval action."
+        ],
+        "deficiencies": [
+          {
+            "description": "Inconsistency in the OPQ Executive Summary (Reference ID: 5164157) which lists the pembrolizumab + platinum chemotherapy combination indication as a proposed indication, while the controlling clinical review (SDN/34, May 2023) confirms this indication has been carved out due to patent protection. If the final approved labeling retains this indication, it would constitute an unauthorized use of a patent-protected indication and a regulatory deficiency. This must be reconciled before the approval action is signed.",
+            "blocking": false
+          },
+          {
+            "description": "The ready-to-use 10 mg/mL formulation differs meaningfully in concentration from the reconstituted Alimta solution (25 mg/mL), and the preparation instructions (withdraw from vial, transfer to empty sterile IV bag) differ from the RLD. The regulatory record must confirm that medication error risk has been adequately characterized and mitigated through labeling, consistent with FDA's Safe Use Initiative principles and 21 CFR 201.57 labeling requirements. Absent adequate differentiation in labeling, this is a labelable (non-blocking) deficiency.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical",
+        "position": "support",
+        "confidence": 0.91,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). No new clinical studies were conducted or submitted under this NDA. The clinical team's role is limited to confirming that the proposed indications, dosing, and patient population are appropriately aligned with the established RLD evidence base, and that no new clinical safety or efficacy issues are introduced by the formulation differences. The proposed indications (excluding the pembrolizumab combination, which is patent-protected) are well-supported by the extensive clinical evidence underlying Alimta's approval across multiple lines of therapy in non-squamous NSCLC and malignant pleural mesothelioma. The formulation differences (ready-to-use solution vs. lyophilized powder, addition of L-cysteine HCl as an excipient, minor mannitol quantity difference) do not introduce new clinical pharmacology or safety concerns that would require independent clinical study, provided the biowaiver and CMC/biopharmaceutics reviews are satisfactory. From a clinical standpoint, the application is approvable.",
+        "key_concerns": [
+          "The pembrolizumab + platinum combination indication (first-line metastatic non-squamous NSCLC, no EGFR/ALK aberrations) is appropriately excluded from this application due to patent protection; the remaining indications are fully supported by Alimta's established clinical evidence base.",
+          "The addition of L-cysteine HCl as an excipient not present in Alimta requires confirmation from CMC and biopharmaceutics that it does not alter the clinical pharmacology, safety profile, or pemetrexed bioavailability \u2014 the clinical pharmacology review confirms no new clinical PK issues if the biowaiver is granted.",
+          "The ready-to-use 10 mg/mL formulation (vs. Alimta's 25 mg/mL post-reconstitution) changes the preparation and administration workflow; labeling must clearly instruct healthcare providers on the volume-based dosing calculation from BSA to avoid dosing errors, particularly given the different concentration from the RLD.",
+          "No independent clinical safety database exists for this product; post-marketing pharmacovigilance will rely entirely on the established Alimta safety profile. This is acceptable for a 505(b)(2) but should be noted.",
+          "Labeling alignment with the most current Alimta prescribing information (including all REMS-adjacent safety communications, supplementation requirements for folic acid/vitamin B12, and dexamethasone premedication) must be confirmed as complete and accurate."
+        ],
+        "deficiencies": [
+          {
+            "description": "No independent clinical safety or efficacy data submitted: acceptable for a 505(b)(2) application relying on Alimta's established evidence base, provided the scientific bridge (biowaiver, CMC comparability) is deemed adequate by other disciplines. This is not a clinical deficiency per se but is contingent on satisfactory OPQ and biopharmaceutics findings.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "toxicology",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). No new nonclinical studies were conducted or submitted under this NDA. From a toxicology/nonclinical safety perspective, pemetrexed is a well-characterized folate analog metabolic inhibitor with an established nonclinical and clinical safety profile built over nearly two decades of post-approval experience with Alimta. The nonclinical safety package for the active moiety (genotoxicity, reproductive toxicity, carcinogenicity, safety pharmacology) is fully supported by the RLD dossier. The sole nonclinical novelty in this application is the addition of L-cysteine hydrochloride as a formulation excipient and a modest reduction in mannitol; neither excipient change raises a new nonclinical safety signal at the concentrations used. The proposed dose (500 mg/m\u00b2 IV q21d) is identical to the approved RLD dose, and while Project Optimus principles call for dose-optimization rationale, this is a 505(b)(2) application for an already-approved active moiety at an already-approved dose \u2014 the dose-optimization question was addressed at the time of original approval and is not re-opened by a formulation-change 505(b)(2). The OPQ team confirmed adequate shelf-life, stability, and leachables data. No new nonclinical deficiencies are identified in this submission.",
+        "key_concerns": [
+          "L-cysteine HCl is a novel excipient not present in Alimta; its nonclinical safety at the proposed concentration (1 mg/mL, ~50\u2013100 mg per dose) should be confirmed as acceptable via existing safety data for this amino acid excipient.",
+          "Project Optimus dose-optimization expectations: the 500 mg/m\u00b2 dose was established at original approval and no new dose-ranging nonclinical or clinical data were submitted; however, for a 505(b)(2) relying entirely on the RLD, this is not a new deficiency.",
+          "Leachables from the ready-to-use vial configuration (glass/stopper contact over 18-month shelf life) were flagged in earlier review cycles but resolved per the CMC team's final assessment \u2014 nonclinical safety of identified leachables should be confirmed as below ICH Q3C/Q3D thresholds.",
+          "Reproductive and developmental toxicity (DART): pemetrexed is Pregnancy Category D / Fetal Risk; labeling must carry adequate warnings consistent with Alimta \u2014 confirmed to be aligned per clinical review."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "support",
+        "confidence": 0.91,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). From a Clinical Pharmacology perspective, the application requests a biowaiver under 21 CFR 320.22, asserting that in vivo bioequivalence studies are unnecessary given that both products are intravenous solutions of the same active moiety at the same dose and route of administration. The OCP review team concurred that no clinical pharmacology studies were conducted or required, and that the physicochemical comparability of the two products, combined with the IV route (bypassing absorption), supports the biowaiver. No new clinical pharmacology data, PK/PD analyses, DDI studies, or organ-impairment studies were submitted or required, as the approved Alimta labeling already addresses these domains and Shilpa's product adopts identical dosing (500 mg/m\u00b2 IV over 10 minutes on Day 1 of a 21-day cycle). The sole formulation difference of clinical pharmacology relevance \u2014 the addition of L-cysteine HCl as an excipient \u2014 was evaluated and found not to raise PK concerns for an IV product. The Clinical Pharmacology team's biowaiver recommendation is scientifically sound and consistent with FDA guidance for IV solutions of established drugs.",
+        "key_concerns": [
+          "Biowaiver justification for IV solution vs. lyophilized powder RLD: adequacy of physicochemical bridge",
+          "L-cysteine HCl as a novel excipient (not present in Alimta): potential for altered pemetrexed stability, degradation products, or in vivo PK perturbation at the IV site",
+          "Concentration difference at point of administration: Alimta reconstitutes to 25 mg/mL then is further diluted; Shilpa's product is a 10 mg/mL ready-to-use solution transferred to an empty IV bag \u2014 local concentration and compatibility profiles differ",
+          "No new organ-impairment, DDI, or special-population PK data submitted \u2014 acceptable only because Alimta labeling already covers these and dosing is identical",
+          "Absence of in vivo BE data: reliance solely on physicochemical comparability and 21 CFR 320.22 waiver criteria"
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "biostatistics",
+        "position": "support",
+        "confidence": 0.92,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (Shilpa Medicare), a ready-to-use 10 mg/mL solution referencing Alimta (pemetrexed disodium, NDA 021462). No new clinical studies, clinical pharmacology studies, or biostatistical analyses were conducted or submitted under this NDA. The application relies entirely on FDA's prior findings of safety and efficacy for the reference listed drug (RLD), Alimta, supplemented by publicly available literature. From a biostatistics perspective, there is no independent statistical evidence to evaluate: no trial data, no endpoints, no randomization scheme, no survival analyses, no multiplicity concerns, and no inferential statistics were submitted. The evidentiary basis for efficacy is wholly inherited from the RLD via the 505(b)(2) pathway, which is the appropriate and legally recognized mechanism for this type of application. All statistical questions regarding efficacy and safety were resolved at the time of Alimta's original approval and subsequent label updates. There are no biostatistical deficiencies within the scope of this submission.",
+        "key_concerns": [
+          "No clinical trial data, PK/PD data, or biostatistical analyses were submitted \u2014 this is expected and appropriate for a 505(b)(2) application relying on the RLD's established efficacy record.",
+          "The biowaiver request (21 CFR 320.22) for in vivo bioequivalence studies is the pivotal scientific bridge; its adequacy is a biopharmaceutics/CMC determination, not a biostatistics determination.",
+          "The addition of L-cysteine HCl as an excipient and the formulation change from lyophilized powder to ready-to-use solution do not raise biostatistical concerns \u2014 these are physicochemical comparability questions addressed by OPQ.",
+          "Patent carve-out of the pembrolizumab + platinum combination indication in earlier submissions was noted; the final May 2023 clinical review indicates labeling was updated to align with Alimta, suggesting this was resolved \u2014 no biostatistical issue arises either way.",
+          "No subgroup analyses, interim analyses, or multiplicity concerns are present because no new trial was conducted."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "cmc",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "This is a 505(b)(2) NDA (NDA 215179) submitted by Shilpa Medicare Ltd. for Pemetrexed Injection, a ready-to-use 10 mg/mL solution in three strengths (100 mg/10 mL, 500 mg/50 mL, 1,000 mg/100 mL), referencing Alimta (NDA 021462). From a CMC perspective, the application has undergone multiple review cycles and a Complete Response Letter was previously issued primarily due to insufficient finished drug product stability data and an inadequate leachables study at the Cadila Healthcare manufacturing site. The final OPQ Executive Summary (dated April\u2013May 2023) concludes that all previously identified product quality deficiencies have been resolved in the resubmission: long-term stability data are now adequate, shelf-life specifications have been established and justified, manufacturing process issues for the 10 mL vial have been addressed, the Cadila Healthcare site is GMP-compliant and approved, and an adequate scientific bridge to the listed drug has been established per 21 CFR 320.24(b)(6). All OPQ subdisciplines (drug substance, drug product, quality labeling, manufacturing, biopharmaceutics, microbiology) are rated Adequate, and OPQ recommends approval. No unresolved CMC Major Deficiencies remain on the record.",
+        "key_concerns": [
+          "Earlier CRL cycle was driven by insufficient finished drug product stability data and inadequate leachables study at Cadila Healthcare \u2014 both now resolved per OPQ Executive Summary.",
+          "Novel excipient L-cysteine HCl (not present in Alimta) required justification as a stabilizer/antioxidant; the OPQ summary confirms the L-cysteine content is monitored at release and on stability, and the scientific bridge to the listed drug is deemed adequate.",
+          "Formulation differences (ready-to-use 10 mg/mL solution vs. Alimta lyophilized powder reconstituted to 25 mg/mL; mannitol 100 mg vs. 106 mg; added NaCl 90 mg/mL) required physicochemical comparability demonstration \u2014 confirmed adequate by biopharmaceutics subdiscipline.",
+          "Biowaiver request under 21 CFR 320.22 for an IV solution is scientifically well-supported; OCP and OPQ both found it acceptable.",
+          "18-month shelf-life at controlled room temperature (20\u201325\u00b0C) is supported by submitted long-term stability data; no cold-chain or aggregation concerns applicable to this small-molecule injectable.",
+          "Container/closure leachables study on 12-month stability samples from Cadila site was previously deficient; confirmed resolved in resubmission.",
+          "Minor labeling formatting inconsistency noted (issue date orientation differs across vial label sizes) \u2014 not a blocking issue."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      }
+    ],
+    "debate_rounds": [],
+    "final_positions": [
+      {
+        "domain": "regulatory",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "NDA 215179 is a 505(b)(2) application by Shilpa Medicare Ltd. for Pemetrexed Injection (10 mg/mL ready-to-use solution) relying on FDA's prior findings of safety and efficacy for the Reference Listed Drug (RLD), Alimta\u00ae (pemetrexed disodium, NDA 021462). From a regulatory standpoint, the application pathway is appropriate: the sponsor correctly invokes 505(b)(2), proposes the same active moiety, dose, and route of administration as the RLD, and seeks the same approved indications (with the appropriate carve-out of the pembrolizumab combination indication that remains patent-protected as of the most recent review cycle). No new clinical efficacy or safety data are required under this pathway, and the evidentiary burden is met by reliance on the RLD's established record. The clinical, clinical pharmacology, and CMC disciplines have each independently found no blocking deficiencies within their domains. From a regulatory/approval-pathway perspective, the application is structurally sound and does not raise novel evidentiary concerns that would require an Accelerated Approval framework, AdComm referral, or a Complete Response Letter on regulatory grounds.",
+        "key_concerns": [
+          "Patent carve-out consistency: The most recent clinical review (SDN/34, May 2023) confirms the pembrolizumab + platinum combination indication has been carved out due to patent protection. The regulatory team must verify that the final proposed labeling submitted in SD-042 (April 2023) is fully consistent with this carve-out and does not inadvertently include or imply the patent-protected indication. Any residual inclusion would constitute a regulatory deficiency requiring correction before approval.",
+          "Biowaiver adequacy under 21 CFR 320.22 and 320.24(b)(6): The sponsor requests a waiver of in vivo bioequivalence studies. Clinical pharmacology has concurred that a biowaiver is appropriate given the IV route of administration and physicochemical comparability. The regulatory reviewer concurs that IV solutions administered at the same dose and rate are generally eligible for biowaivers per FDA guidance, but the scientific bridge (including the L-cysteine HCl excipient and the concentration difference: 10 mg/mL vs. 25 mg/mL post-reconstitution for Alimta) must be documented as adequate in the administrative record.",
+          "Formulation differences and excipient justification: Shilpa's product contains L-cysteine HCl (not present in Alimta) and differs in mannitol content (100 mg vs. 106 mg). While CMC has found these adequate, the regulatory record should confirm that the novel excipient does not raise safety signals that would require independent clinical evaluation beyond what the 505(b)(2) reliance package provides.",
+          "Ready-to-use vs. lyophilized powder \u2014 administration instructions and medication error risk: The product is a 10 mg/mL ready-to-use solution requiring transfer to an empty sterile IV bag, whereas Alimta is reconstituted to 25 mg/mL and then diluted. The different concentration and preparation steps create a potential for medication errors. Labeling must clearly differentiate the preparation instructions from those of Alimta, and the regulatory team should confirm that the ISMP/medication error risk has been adequately addressed in the proposed labeling.",
+          "Indication scope across review cycles: Early submissions (SDN/1, June 2021) included the pembrolizumab combination indication; later submissions carved it out. The regulatory team must confirm that the final approval action is based on the carved-out indication set and that no inconsistency exists between the OPQ Executive Summary (which lists the pembrolizumab indication) and the final approved labeling \u2014 this discrepancy in the CMC Executive Summary should be reconciled.",
+          "18-month shelf-life and stability-based approval conditions: CMC recommends an 18-month expiration dating period. The regulatory team should confirm this is reflected in the final approved labeling and container/carton labels, and that no post-approval stability commitments remain outstanding that would affect the approval action."
+        ],
+        "deficiencies": [
+          {
+            "description": "Inconsistency in the OPQ Executive Summary (Reference ID: 5164157) which lists the pembrolizumab + platinum chemotherapy combination indication as a proposed indication, while the controlling clinical review (SDN/34, May 2023) confirms this indication has been carved out due to patent protection. If the final approved labeling retains this indication, it would constitute an unauthorized use of a patent-protected indication and a regulatory deficiency. This must be reconciled before the approval action is signed.",
+            "blocking": false
+          },
+          {
+            "description": "The ready-to-use 10 mg/mL formulation differs meaningfully in concentration from the reconstituted Alimta solution (25 mg/mL), and the preparation instructions (withdraw from vial, transfer to empty sterile IV bag) differ from the RLD. The regulatory record must confirm that medication error risk has been adequately characterized and mitigated through labeling, consistent with FDA's Safe Use Initiative principles and 21 CFR 201.57 labeling requirements. Absent adequate differentiation in labeling, this is a labelable (non-blocking) deficiency.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical",
+        "position": "support",
+        "confidence": 0.91,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). No new clinical studies were conducted or submitted under this NDA. The clinical team's role is limited to confirming that the proposed indications, dosing, and patient population are appropriately aligned with the established RLD evidence base, and that no new clinical safety or efficacy issues are introduced by the formulation differences. The proposed indications (excluding the pembrolizumab combination, which is patent-protected) are well-supported by the extensive clinical evidence underlying Alimta's approval across multiple lines of therapy in non-squamous NSCLC and malignant pleural mesothelioma. The formulation differences (ready-to-use solution vs. lyophilized powder, addition of L-cysteine HCl as an excipient, minor mannitol quantity difference) do not introduce new clinical pharmacology or safety concerns that would require independent clinical study, provided the biowaiver and CMC/biopharmaceutics reviews are satisfactory. From a clinical standpoint, the application is approvable.",
+        "key_concerns": [
+          "The pembrolizumab + platinum combination indication (first-line metastatic non-squamous NSCLC, no EGFR/ALK aberrations) is appropriately excluded from this application due to patent protection; the remaining indications are fully supported by Alimta's established clinical evidence base.",
+          "The addition of L-cysteine HCl as an excipient not present in Alimta requires confirmation from CMC and biopharmaceutics that it does not alter the clinical pharmacology, safety profile, or pemetrexed bioavailability \u2014 the clinical pharmacology review confirms no new clinical PK issues if the biowaiver is granted.",
+          "The ready-to-use 10 mg/mL formulation (vs. Alimta's 25 mg/mL post-reconstitution) changes the preparation and administration workflow; labeling must clearly instruct healthcare providers on the volume-based dosing calculation from BSA to avoid dosing errors, particularly given the different concentration from the RLD.",
+          "No independent clinical safety database exists for this product; post-marketing pharmacovigilance will rely entirely on the established Alimta safety profile. This is acceptable for a 505(b)(2) but should be noted.",
+          "Labeling alignment with the most current Alimta prescribing information (including all REMS-adjacent safety communications, supplementation requirements for folic acid/vitamin B12, and dexamethasone premedication) must be confirmed as complete and accurate."
+        ],
+        "deficiencies": [
+          {
+            "description": "No independent clinical safety or efficacy data submitted: acceptable for a 505(b)(2) application relying on Alimta's established evidence base, provided the scientific bridge (biowaiver, CMC comparability) is deemed adequate by other disciplines. This is not a clinical deficiency per se but is contingent on satisfactory OPQ and biopharmaceutics findings.",
+            "blocking": false
+          }
+        ],
+        "key_rationale": null
+      },
+      {
+        "domain": "toxicology",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). No new nonclinical studies were conducted or submitted under this NDA. From a toxicology/nonclinical safety perspective, pemetrexed is a well-characterized folate analog metabolic inhibitor with an established nonclinical and clinical safety profile built over nearly two decades of post-approval experience with Alimta. The nonclinical safety package for the active moiety (genotoxicity, reproductive toxicity, carcinogenicity, safety pharmacology) is fully supported by the RLD dossier. The sole nonclinical novelty in this application is the addition of L-cysteine hydrochloride as a formulation excipient and a modest reduction in mannitol; neither excipient change raises a new nonclinical safety signal at the concentrations used. The proposed dose (500 mg/m\u00b2 IV q21d) is identical to the approved RLD dose, and while Project Optimus principles call for dose-optimization rationale, this is a 505(b)(2) application for an already-approved active moiety at an already-approved dose \u2014 the dose-optimization question was addressed at the time of original approval and is not re-opened by a formulation-change 505(b)(2). The OPQ team confirmed adequate shelf-life, stability, and leachables data. No new nonclinical deficiencies are identified in this submission.",
+        "key_concerns": [
+          "L-cysteine HCl is a novel excipient not present in Alimta; its nonclinical safety at the proposed concentration (1 mg/mL, ~50\u2013100 mg per dose) should be confirmed as acceptable via existing safety data for this amino acid excipient.",
+          "Project Optimus dose-optimization expectations: the 500 mg/m\u00b2 dose was established at original approval and no new dose-ranging nonclinical or clinical data were submitted; however, for a 505(b)(2) relying entirely on the RLD, this is not a new deficiency.",
+          "Leachables from the ready-to-use vial configuration (glass/stopper contact over 18-month shelf life) were flagged in earlier review cycles but resolved per the CMC team's final assessment \u2014 nonclinical safety of identified leachables should be confirmed as below ICH Q3C/Q3D thresholds.",
+          "Reproductive and developmental toxicity (DART): pemetrexed is Pregnancy Category D / Fetal Risk; labeling must carry adequate warnings consistent with Alimta \u2014 confirmed to be aligned per clinical review."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "clinical_pharmacology",
+        "position": "support",
+        "confidence": 0.91,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (10 mg/mL ready-to-use solution) submitted by Shilpa Medicare Ltd., relying on FDA's prior findings of safety and efficacy for the reference listed drug Alimta (pemetrexed disodium, NDA 021462). From a Clinical Pharmacology perspective, the application requests a biowaiver under 21 CFR 320.22, asserting that in vivo bioequivalence studies are unnecessary given that both products are intravenous solutions of the same active moiety at the same dose and route of administration. The OCP review team concurred that no clinical pharmacology studies were conducted or required, and that the physicochemical comparability of the two products, combined with the IV route (bypassing absorption), supports the biowaiver. No new clinical pharmacology data, PK/PD analyses, DDI studies, or organ-impairment studies were submitted or required, as the approved Alimta labeling already addresses these domains and Shilpa's product adopts identical dosing (500 mg/m\u00b2 IV over 10 minutes on Day 1 of a 21-day cycle). The sole formulation difference of clinical pharmacology relevance \u2014 the addition of L-cysteine HCl as an excipient \u2014 was evaluated and found not to raise PK concerns for an IV product. The Clinical Pharmacology team's biowaiver recommendation is scientifically sound and consistent with FDA guidance for IV solutions of established drugs.",
+        "key_concerns": [
+          "Biowaiver justification for IV solution vs. lyophilized powder RLD: adequacy of physicochemical bridge",
+          "L-cysteine HCl as a novel excipient (not present in Alimta): potential for altered pemetrexed stability, degradation products, or in vivo PK perturbation at the IV site",
+          "Concentration difference at point of administration: Alimta reconstitutes to 25 mg/mL then is further diluted; Shilpa's product is a 10 mg/mL ready-to-use solution transferred to an empty IV bag \u2014 local concentration and compatibility profiles differ",
+          "No new organ-impairment, DDI, or special-population PK data submitted \u2014 acceptable only because Alimta labeling already covers these and dosing is identical",
+          "Absence of in vivo BE data: reliance solely on physicochemical comparability and 21 CFR 320.22 waiver criteria"
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "biostatistics",
+        "position": "support",
+        "confidence": 0.92,
+        "summary": "This is a 505(b)(2) NDA for Pemetrexed Injection (Shilpa Medicare), a ready-to-use 10 mg/mL solution referencing Alimta (pemetrexed disodium, NDA 021462). No new clinical studies, clinical pharmacology studies, or biostatistical analyses were conducted or submitted under this NDA. The application relies entirely on FDA's prior findings of safety and efficacy for the reference listed drug (RLD), Alimta, supplemented by publicly available literature. From a biostatistics perspective, there is no independent statistical evidence to evaluate: no trial data, no endpoints, no randomization scheme, no survival analyses, no multiplicity concerns, and no inferential statistics were submitted. The evidentiary basis for efficacy is wholly inherited from the RLD via the 505(b)(2) pathway, which is the appropriate and legally recognized mechanism for this type of application. All statistical questions regarding efficacy and safety were resolved at the time of Alimta's original approval and subsequent label updates. There are no biostatistical deficiencies within the scope of this submission.",
+        "key_concerns": [
+          "No clinical trial data, PK/PD data, or biostatistical analyses were submitted \u2014 this is expected and appropriate for a 505(b)(2) application relying on the RLD's established efficacy record.",
+          "The biowaiver request (21 CFR 320.22) for in vivo bioequivalence studies is the pivotal scientific bridge; its adequacy is a biopharmaceutics/CMC determination, not a biostatistics determination.",
+          "The addition of L-cysteine HCl as an excipient and the formulation change from lyophilized powder to ready-to-use solution do not raise biostatistical concerns \u2014 these are physicochemical comparability questions addressed by OPQ.",
+          "Patent carve-out of the pembrolizumab + platinum combination indication in earlier submissions was noted; the final May 2023 clinical review indicates labeling was updated to align with Alimta, suggesting this was resolved \u2014 no biostatistical issue arises either way.",
+          "No subgroup analyses, interim analyses, or multiplicity concerns are present because no new trial was conducted."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      },
+      {
+        "domain": "cmc",
+        "position": "support",
+        "confidence": 0.88,
+        "summary": "This is a 505(b)(2) NDA (NDA 215179) submitted by Shilpa Medicare Ltd. for Pemetrexed Injection, a ready-to-use 10 mg/mL solution in three strengths (100 mg/10 mL, 500 mg/50 mL, 1,000 mg/100 mL), referencing Alimta (NDA 021462). From a CMC perspective, the application has undergone multiple review cycles and a Complete Response Letter was previously issued primarily due to insufficient finished drug product stability data and an inadequate leachables study at the Cadila Healthcare manufacturing site. The final OPQ Executive Summary (dated April\u2013May 2023) concludes that all previously identified product quality deficiencies have been resolved in the resubmission: long-term stability data are now adequate, shelf-life specifications have been established and justified, manufacturing process issues for the 10 mL vial have been addressed, the Cadila Healthcare site is GMP-compliant and approved, and an adequate scientific bridge to the listed drug has been established per 21 CFR 320.24(b)(6). All OPQ subdisciplines (drug substance, drug product, quality labeling, manufacturing, biopharmaceutics, microbiology) are rated Adequate, and OPQ recommends approval. No unresolved CMC Major Deficiencies remain on the record.",
+        "key_concerns": [
+          "Earlier CRL cycle was driven by insufficient finished drug product stability data and inadequate leachables study at Cadila Healthcare \u2014 both now resolved per OPQ Executive Summary.",
+          "Novel excipient L-cysteine HCl (not present in Alimta) required justification as a stabilizer/antioxidant; the OPQ summary confirms the L-cysteine content is monitored at release and on stability, and the scientific bridge to the listed drug is deemed adequate.",
+          "Formulation differences (ready-to-use 10 mg/mL solution vs. Alimta lyophilized powder reconstituted to 25 mg/mL; mannitol 100 mg vs. 106 mg; added NaCl 90 mg/mL) required physicochemical comparability demonstration \u2014 confirmed adequate by biopharmaceutics subdiscipline.",
+          "Biowaiver request under 21 CFR 320.22 for an IV solution is scientifically well-supported; OCP and OPQ both found it acceptable.",
+          "18-month shelf-life at controlled room temperature (20\u201325\u00b0C) is supported by submitted long-term stability data; no cold-chain or aggregation concerns applicable to this small-molecule injectable.",
+          "Container/closure leachables study on 12-month stability samples from Cadila site was previously deficient; confirmed resolved in resubmission.",
+          "Minor labeling formatting inconsistency noted (issue date orientation differs across vial label sizes) \u2014 not a blocking issue."
+        ],
+        "deficiencies": [],
+        "key_rationale": null
+      }
+    ]
+  },
+  "eval": {
+    "case_id": "NDA215179",
+    "is_baseline": false,
+    "debate_rounds": 3,
+    "topology": "cdtl",
+    "predicted_action": "Approval",
+    "actual_action": "CRL",
+    "reg_exact": false,
+    "reg_binary": false,
+    "fidelity_matched": 0,
+    "fidelity_total": 0,
+    "fidelity_recall": null,
+    "n_agents": 6,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 3,
+    "dose_optimization_raised": true,
+    "discordance": 0.0
+  },
+  "baseline": {
+    "predicted_action": "Approval",
+    "major_deficiencies": [
+      {
+        "description": "No in-vivo bioequivalence study was conducted; approval relies on a biowaiver under 21 CFR 320.22 based on physicochemical comparability of the ready-to-use solution to reconstituted/diluted Alimta. While the clinical pharmacology team found this acceptable, the absence of PK bridging data represents a residual uncertainty that must be formally documented and confirmed as adequate by the clinical pharmacology discipline before approval can proceed.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Addition of L-cysteine HCl as a novel excipient not present in the reference listed drug (Alimta). Although no clinical safety signal was raised, the excipient's functional role and potential for patient-level hypersensitivity or reactivity has not been fully characterized in labeling. Adequate disclosure and justification must be confirmed prior to approval.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "Incomplete stability data and unresolved leachables concerns at the Cadila Healthcare manufacturing site were identified in earlier review cycles. Although the OPQ executive summary recommends approval, formal written confirmation that all CMC deficiencies \u2014 including container-closure leachables and shelf-life-supporting stability data \u2014 have been fully resolved is required as a condition of approval.",
+        "source_domain": "generalist"
+      },
+      {
+        "description": "The pembrolizumab + platinum combination indication is excluded from this application due to patent protection. Labeling must unambiguously delineate the approved indications from the excluded combination indication to prevent off-label use and prescriber confusion. A labeling review confirming this delineation is a prerequisite to approval.",
+        "source_domain": "generalist"
+      }
+    ]
+  },
+  "baseline_eval": {
+    "case_id": "NDA215179",
+    "is_baseline": true,
+    "debate_rounds": 0,
+    "topology": "cdtl",
+    "predicted_action": "Approval",
+    "actual_action": "CRL",
+    "reg_exact": false,
+    "reg_binary": false,
+    "fidelity_matched": 0,
+    "fidelity_total": 0,
+    "fidelity_recall": null,
+    "n_agents": 1,
+    "n_oppose": 0,
+    "n_blocking_agents": 0,
+    "n_blocking_defs": 0,
+    "n_total_defs": 2,
+    "dose_optimization_raised": true,
+    "discordance": 0.0
+  }
+}
