@@ -151,5 +151,30 @@ ul.deflist .src { color: var(--faint); font-size: 11.5px; }
 .aggbox .pat { font-family: ui-monospace, monospace; color: var(--accent); font-size: 13px; }
 .aggbox .summary { color: var(--muted); font-size: 13px; margin-top: 6px; }
 
+/* model axis (exploratory) */
+.tagx { font-size: 10.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em;
+  color: var(--amber); border: 1px solid rgba(251,191,36,.45); background: rgba(251,191,36,.1);
+  padding: 2px 8px; border-radius: 999px; margin-left: 8px; vertical-align: middle; }
+.axis-card .axis-note { color: #f4e2b0; font-size: 12.5px; margin: 0 0 16px; }
+.axis2x2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-bottom: 16px; }
+@media (max-width: 620px) { .axis2x2 { grid-template-columns: 1fr; } }
+.axis-cell { background: var(--panel2); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.axis-cell .m { font-family: ui-monospace, monospace; font-size: 12px; color: var(--muted); }
+.axis-cell .vr { font-weight: 700; font-size: 13px; margin: 8px 0 12px; }
+.axis-cell .vr.up { color: var(--green); } .axis-cell .vr.down { color: var(--red); }
+.axis-cell .scores { display: flex; gap: 22px; }
+.axis-cell .sc .k { font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: .05em; display: block; margin-bottom: 2px; }
+.axis-cell .sc .v { font-weight: 700; font-size: 21px; font-variant-numeric: tabular-nums; color: var(--muted); }
+.axis-cell .sc .v.win { color: var(--green); }
+.axis-scroll { overflow-x: auto; }
+table.axis { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+table.axis th, table.axis td { padding: 9px 8px; border-bottom: 1px solid var(--line); text-align: center; white-space: nowrap; }
+table.axis th { color: var(--muted); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: .04em; }
+table.axis td.drug { text-align: left; color: var(--text); font-weight: 600; }
+table.axis tbody tr:last-child td { border-bottom: none; }
+table.axis .mk { font-weight: 700; margin-left: 5px; }
+table.axis .mk.ok { color: var(--green); } table.axis .mk.no { color: var(--red); }
+.axis-mech { margin-top: 14px; color: var(--muted); font-size: 12.5px; border-left: 2px solid var(--line2); padding-left: 12px; }
+
 footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--faint); font-size: 12.5px; }
 .bad { color: var(--red); }
