@@ -183,6 +183,10 @@ table.vtab tr:last-child td { border-bottom: none; }
 table.vtab td.win { color: var(--green); font-weight: 700; }
 .vmeta { font-size: 11.5px; color: var(--faint); margin-top: 4px; }
 table.axis.vcase td.num { text-align: right; }
+.leak-cap { caption-side: top; text-align: left; color: var(--faint); font-size: 11.5px; padding: 0 0 6px; }
+ul.leak-layers { margin: 14px 0 0; padding-left: 18px; }
+ul.leak-layers li { margin: 6px 0; font-size: 13px; color: var(--muted); }
+ul.leak-layers li b { color: var(--text); }
 
 footer { border-top: 1px solid var(--line); padding: 22px 0 40px; color: var(--faint); font-size: 12.5px; }
 .bad { color: var(--red); }

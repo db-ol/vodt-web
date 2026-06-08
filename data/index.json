@@ -153,6 +153,7 @@
     "note": "CONFOUNDED: outcome is near-perfectly separable by document genre \u2014 source all classes from the same genre before scaling."
   },
   "caveats": [
+    "Contamination ceiling: a bare single model, given only the package, predicts the FDA action at 70% (Sonnet) / 80% (Opus), at or above the multi-agent team (60%), and redaction does not lower it. The prediction-task accuracy largely reflects reading or recalling the answer, not reasoning.",
     "K=5 variance: the published single-draw headline was a favorable draw. On modal scoring the single agent matches or beats the team on both models (Sonnet team 6/10 vs baseline 7/10; Opus team 6/10 vs baseline 8/10). Multi-agent does not beat the single agent on regulatory-action prediction here.",
     "n=10 paired cases: only large effects are detectable; report as a trend with wide CIs.",
     "Document-genre confound: outcome is 90% separable by document style alone \u2014 regulatory-alignment results are confounded by genre."
@@ -348,5 +349,55 @@
       }
     },
     "note": "Honest per-case modal scoring over K repeats. The single-draw headline above was optimistic: with variance measured, the single agent matches or beats the team on both models, and the earlier team edge does not survive."
+  },
+  "leakage": {
+    "probe": "bare-package: personas and deliberation stripped, one model guesses the FDA action at temperature 0",
+    "models": {
+      "sonnet": {
+        "bare": 0.7,
+        "team_modal": 0.6
+      },
+      "opus": {
+        "bare": 0.8,
+        "team_modal": 0.6
+      }
+    },
+    "robustness": [
+      {
+        "version": "original packages",
+        "sonnet": 0.7,
+        "opus": 0.8
+      },
+      {
+        "version": "recommendation phrases masked",
+        "sonnet": 0.7,
+        "opus": 0.8
+      },
+      {
+        "version": "plus proximity masks",
+        "sonnet": 0.7,
+        "opus": 0.8
+      },
+      {
+        "version": "de-identified (names, trials, app no., pathway)",
+        "sonnet": 0.7,
+        "opus": 0.8
+      }
+    ],
+    "layers": [
+      {
+        "name": "Explicit leakage",
+        "detail": "Post-decision reviews restate the outcome in many phrasings and regulation citations; two regex passes could not fully remove it."
+      },
+      {
+        "name": "Legitimate inference",
+        "detail": "Trial design predicts the action: single-arm plus ORR implies accelerated approval, randomized plus survival implies traditional approval. A single model reads it off."
+      },
+      {
+        "name": "Fingerprint memorization",
+        "detail": "Removing drug identity did not lower the ceiling, but the clinical fingerprint lets a model re-identify the drug and recall the outcome. Cannot be confirmed or excluded."
+      }
+    ],
+    "conclusion": "Across all four input versions the bare single-model ceiling is unchanged and meets or exceeds the multi-agent team (60%). The prediction task cannot be redacted into a clean reasoning benchmark, so it cannot demonstrate multi-agent value. The clean path is the generative design task."
   }
 }

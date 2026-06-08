@@ -134,6 +134,36 @@ function renderVariance(idx) {
     `<p class="axis-note">${esc(v.note)}</p><div class="axis2x2">${cards}</div>${strip}`;
 }
 
+/* ---- contamination / leakage probe ---- */
+function renderLeakage(idx) {
+  const L = idx.leakage;
+  if (!L || !L.models) return;
+  $("#leak").hidden = false;
+
+  const cards = ["sonnet", "opus"].filter((k) => L.models[k]).map((k) => {
+    const m = L.models[k];
+    return `<div class="axis-cell">
+      <div class="m">${esc(MODEL_NAME[k] || k)}</div>
+      <div class="vr down">bare single model wins</div>
+      <table class="vtab"><tr><th>3-class</th><th>bare</th><th>team</th></tr>
+        <tr><td>accuracy</td><td class="win">${pct(m.bare)}</td><td>${pct(m.team_modal)}</td></tr></table>
+      <div class="vmeta">bare = no team, no reasoning, just read the package</div>
+    </div>`;
+  }).join("");
+
+  const rrows = (L.robustness || []).map((r) =>
+    `<tr><td class="drug">${esc(r.version)}</td><td class="num">${pct(r.sonnet)}</td><td class="num">${pct(r.opus)}</td></tr>`).join("");
+  const robust = `<div class="axis-scroll"><table class="axis"><caption class="leak-cap">redaction does not move the ceiling</caption>
+    <tr><th class="drug">input version (more redaction →)</th><th>Sonnet bare</th><th>Opus bare</th></tr>${rrows}</table></div>`;
+
+  const layers = (L.layers || []).map((x) => `<li><b>${esc(x.name)}.</b> ${esc(x.detail)}</li>`).join("");
+
+  $("#leak-body").innerHTML =
+    `<p class="axis-note">${esc(L.conclusion)}</p>
+     <div class="axis2x2">${cards}</div>${robust}
+     <ul class="leak-layers">${layers}</ul>`;
+}
+
 /* ---- case list ---- */
 function renderCaseList(idx) {
   $("#case-list").innerHTML = (idx.cases || []).map((c) => {
@@ -219,7 +249,7 @@ async function selectCase(id) {
 async function main() {
   try {
     const idx = await (await fetch("data/index.json")).json();
-    renderMeta(idx); renderCaveat(idx); renderSummary(idx); renderConfusion(idx); renderVariance(idx); renderCaseList(idx);
+    renderMeta(idx); renderCaveat(idx); renderSummary(idx); renderConfusion(idx); renderVariance(idx); renderLeakage(idx); renderCaseList(idx);
     if ((idx.cases || []).length) selectCase(idx.cases[0].case_id);
   } catch (e) {
     $("#summary-body").innerHTML = `<p class="bad">Failed to load data: ${esc(e.message)}</p>`;
