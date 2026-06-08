@@ -89,45 +89,49 @@ function renderConfusion(idx) {
   $("#confusion").innerHTML = `<table class="cm"><caption>rows = actual FDA action · columns = team prediction · green diagonal = correct</caption>${head}${rows}</table>`;
 }
 
-/* ---- model axis (exploratory: Sonnet vs Opus on a shared subset) ---- */
-function axisMark(pred, actual) {
-  const ok = pred === actual;
-  return `${badge(pred)}<span class="mk ${ok ? "ok" : "no"}">${ok ? "✓" : "✗"}</span>`;
-}
+/* ---- K-repeat variance (both models, honest modal scoring) ---- */
+const MODEL_NAME = { sonnet: "claude-sonnet-4-6", opus: "claude-opus-4-8" };
 
-function renderModelAxis(idx) {
-  const ax = idx.model_axis;
-  if (!ax || !(ax.rows || []).length) return;
+function renderVariance(idx) {
+  const v = idx.variance;
+  if (!v || !v.models) return;
   $("#axis").hidden = false;
-  $("#axis-hint").textContent = `n=${ax.n} · K=${ax.k} · directional only`;
+  $("#axis-hint").textContent = `${v.cases} cases × K=${v.k} repeats · modal per case`;
 
-  const cells = (ax.models || []).map((m) => {
-    const up = m.team_correct > m.baseline_correct;
-    const down = m.team_correct < m.baseline_correct;
-    const arrow = up ? "▲ multi-agent helps" : down ? "▼ multi-agent hurts" : "— no difference";
+  const cards = ["sonnet", "opus"].filter((k) => v.models[k]).map((k) => {
+    const b = v.models[k];
+    const baseAhead = b.baseline_exact > b.team_exact;
+    const verdict = baseAhead ? "▼ single agent ahead" : (b.team_exact > b.baseline_exact ? "▲ team ahead" : "— even");
+    const row = (lbl, tv, bv) =>
+      `<tr><td>${lbl}</td>
+        <td class="${tv >= bv ? "win" : ""}">${tv}/${b.n}</td>
+        <td class="${bv > tv ? "win" : ""}">${bv}/${b.n}</td></tr>`;
     return `<div class="axis-cell">
-      <div class="m">${esc(m.model)}</div>
-      <div class="vr ${up ? "up" : down ? "down" : ""}">${arrow}</div>
-      <div class="scores">
-        <div class="sc"><span class="k">team</span><span class="v ${m.team_correct >= m.baseline_correct ? "win" : ""}">${m.team_correct}/${m.n}</span></div>
-        <div class="sc"><span class="k">single agent</span><span class="v ${m.baseline_correct > m.team_correct ? "win" : ""}">${m.baseline_correct}/${m.n}</span></div>
-      </div></div>`;
+      <div class="m">${esc(MODEL_NAME[k] || k)}</div>
+      <div class="vr ${baseAhead ? "down" : ""}">${verdict} <span class="faint">(3-class)</span></div>
+      <table class="vtab"><tr><th></th><th>team</th><th>single</th></tr>
+        ${row("3-class", b.team_exact, b.baseline_exact)}
+        ${row("binary", b.team_binary, b.baseline_binary)}</table>
+      <div class="vmeta">verdict stability ${pct(b.team_stability)} · McNemar p=${b.mcnemar_p}</div>
+    </div>`;
   }).join("");
 
-  const head = `<tr><th class="drug">case</th><th>actual</th><th>Sonnet team</th><th>Sonnet single</th><th>Opus team</th><th>Opus single</th></tr>`;
-  const rows = ax.rows.map((r) => `<tr>
-    <td class="drug">${esc(r.drug)}</td>
-    <td>${badge(r.actual)}</td>
-    <td>${axisMark(r.sonnet_team, r.actual)}</td>
-    <td>${axisMark(r.sonnet_base, r.actual)}</td>
-    <td>${axisMark(r.opus_team, r.actual)}</td>
-    <td>${axisMark(r.opus_base, r.actual)}</td></tr>`).join("");
+  const head = v.models.sonnet;
+  let strip = "";
+  if (head && head.per_case) {
+    const rows = Object.entries(head.per_case).map(([cid, c]) => {
+      const drug = (idx.cases.find((x) => x.case_id === cid) || {}).drug_name || cid;
+      return `<tr><td class="drug">${esc(drug)}</td><td>${badge(c.actual)}</td>
+        <td>${badge(c.modal_pred)}<span class="mk ${c.correct ? "ok" : "no"}">${c.correct ? "✓" : "✗"}</span></td>
+        <td class="num">${pct(c.exact_rate)}</td><td class="num">${pct(c.stability)}</td></tr>`;
+    }).join("");
+    strip = `<div class="axis-scroll"><table class="axis vcase">
+      <tr><th class="drug">case (Sonnet)</th><th>actual</th><th>modal pred</th><th>exact rate</th><th>stability</th></tr>
+      ${rows}</table></div>`;
+  }
 
   $("#axis-body").innerHTML =
-    `<p class="axis-note">${esc(ax.caveat || "")}</p>
-     <div class="axis2x2">${cells}</div>
-     <div class="axis-scroll"><table class="axis">${head}${rows}</table></div>
-     ${ax.mechanism ? `<p class="axis-mech">${esc(ax.mechanism)}</p>` : ""}`;
+    `<p class="axis-note">${esc(v.note)}</p><div class="axis2x2">${cards}</div>${strip}`;
 }
 
 /* ---- case list ---- */
@@ -215,7 +219,7 @@ async function selectCase(id) {
 async function main() {
   try {
     const idx = await (await fetch("data/index.json")).json();
-    renderMeta(idx); renderCaveat(idx); renderSummary(idx); renderConfusion(idx); renderModelAxis(idx); renderCaseList(idx);
+    renderMeta(idx); renderCaveat(idx); renderSummary(idx); renderConfusion(idx); renderVariance(idx); renderCaseList(idx);
     if ((idx.cases || []).length) selectCase(idx.cases[0].case_id);
   } catch (e) {
     $("#summary-body").innerHTML = `<p class="bad">Failed to load data: ${esc(e.message)}</p>`;

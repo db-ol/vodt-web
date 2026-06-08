@@ -153,68 +153,200 @@
     "note": "CONFOUNDED: outcome is near-perfectly separable by document genre \u2014 source all classes from the same genre before scaling."
   },
   "caveats": [
+    "K=5 variance: the published single-draw headline was a favorable draw. On modal scoring the single agent matches or beats the team on both models (Sonnet team 6/10 vs baseline 7/10; Opus team 6/10 vs baseline 8/10). Multi-agent does not beat the single agent on regulatory-action prediction here.",
     "n=10 paired cases: only large effects are detectable; report as a trend with wide CIs.",
     "Document-genre confound: outcome is 90% separable by document style alone \u2014 regulatory-alignment results are confounded by genre."
   ],
-  "model_axis": {
-    "label": "Model axis (exploratory)",
-    "subtitle": "Does multi-agent help depend on the base model?",
-    "n": 3,
-    "k": 1,
-    "debate_rounds": 3,
-    "caveat": "Exploratory: n=3 shared subset, K=1, directional only and not powered. Same cases, two models, identical pipeline.",
-    "subset": [
-      "NDA204114",
-      "NDA216340",
-      "talazoparib-mcrpc-odac-reject"
-    ],
-    "models": [
-      {
-        "key": "sonnet",
-        "model": "claude-sonnet-4-6",
-        "team_correct": 3,
-        "baseline_correct": 2,
-        "n": 3,
-        "verdict": "multi-agent helps"
+  "variance": {
+    "k": 5,
+    "rounds": 3,
+    "cases": 10,
+    "models": {
+      "sonnet": {
+        "n": 10,
+        "k": 5,
+        "team_exact": 6,
+        "baseline_exact": 7,
+        "team_binary": 9,
+        "baseline_binary": 8,
+        "team_wilson": [
+          0.313,
+          0.832
+        ],
+        "baseline_wilson": [
+          0.397,
+          0.892
+        ],
+        "team_stability": 0.86,
+        "mcnemar_p": 1.0,
+        "mc_team_only": 1,
+        "mc_base_only": 2,
+        "per_case": {
+          "BLA761028": {
+            "actual": "Approval",
+            "modal_pred": "Approval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "BLA761210": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "BLA761467": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 0.6
+          },
+          "NDA204114": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0.2,
+            "stability": 0.8
+          },
+          "NDA208772": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "NDA210868": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "NDA213721": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 1.0
+          },
+          "NDA215179": {
+            "actual": "CRL",
+            "modal_pred": "Approval",
+            "correct": false,
+            "exact_rate": 0.2,
+            "stability": 0.6
+          },
+          "NDA216340": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "talazoparib-mcrpc-odac-reject": {
+            "actual": "CRL",
+            "modal_pred": "CRL",
+            "correct": true,
+            "exact_rate": 0.6,
+            "stability": 0.6
+          }
+        }
       },
-      {
-        "key": "opus",
-        "model": "claude-opus-4-8",
-        "team_correct": 1,
-        "baseline_correct": 3,
-        "n": 3,
-        "verdict": "multi-agent hurts"
+      "opus": {
+        "n": 10,
+        "k": 4,
+        "team_exact": 6,
+        "baseline_exact": 8,
+        "team_binary": 9,
+        "baseline_binary": 9,
+        "team_wilson": [
+          0.313,
+          0.832
+        ],
+        "baseline_wilson": [
+          0.49,
+          0.943
+        ],
+        "team_stability": 0.94,
+        "mcnemar_p": 0.5,
+        "mc_team_only": 0,
+        "mc_base_only": 2,
+        "per_case": {
+          "BLA761028": {
+            "actual": "Approval",
+            "modal_pred": "Approval",
+            "correct": true,
+            "exact_rate": 0.6,
+            "stability": 0.6
+          },
+          "BLA761210": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "BLA761467": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 0.8
+          },
+          "NDA204114": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 1.0
+          },
+          "NDA208772": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "NDA210868": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "NDA213721": {
+            "actual": "Approval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 1.0
+          },
+          "NDA215179": {
+            "actual": "CRL",
+            "modal_pred": "Approval",
+            "correct": false,
+            "exact_rate": 0,
+            "stability": 1.0
+          },
+          "NDA216340": {
+            "actual": "AcceleratedApproval",
+            "modal_pred": "AcceleratedApproval",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          },
+          "talazoparib-mcrpc-odac-reject": {
+            "actual": "CRL",
+            "modal_pred": "CRL",
+            "correct": true,
+            "exact_rate": 1,
+            "stability": 1.0
+          }
+        }
       }
-    ],
-    "rows": [
-      {
-        "case_id": "NDA204114",
-        "drug": "MEKINIST",
-        "actual": "Approval",
-        "sonnet_team": "Approval",
-        "sonnet_base": "Approval",
-        "opus_team": "AcceleratedApproval",
-        "opus_base": "Approval"
-      },
-      {
-        "case_id": "NDA216340",
-        "drug": "KRAZATI",
-        "actual": "AcceleratedApproval",
-        "sonnet_team": "AcceleratedApproval",
-        "sonnet_base": "AcceleratedApproval",
-        "opus_team": "AcceleratedApproval",
-        "opus_base": "AcceleratedApproval"
-      },
-      {
-        "case_id": "talazoparib-mcrpc-odac-reject",
-        "drug": "Talzenna (talazoparib) + enzalutamide",
-        "actual": "CRL",
-        "sonnet_team": "CRL",
-        "sonnet_base": "AcceleratedApproval",
-        "opus_team": "AcceleratedApproval",
-        "opus_base": "CRL"
-      }
-    ],
-    "mechanism": "On talazoparib (true CRL): the Sonnet single agent alone misses it (Accelerated Approval) and the Sonnet team's debate catches the CRL; the Opus single agent alone catches the CRL but the Opus team dilutes it back to Accelerated Approval (1 opposer, 0 blocking). Consensus rescues the weaker model and erodes the stronger model's confident call."
+    },
+    "note": "Honest per-case modal scoring over K repeats. The single-draw headline above was optimistic: with variance measured, the single agent matches or beats the team on both models, and the earlier team edge does not survive."
   }
 }
