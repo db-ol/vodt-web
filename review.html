@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Blinded starting-dose review</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .rwrap { max-width: 860px; margin: 0 auto; padding: 24px 18px 80px; }
+    .gate { margin: 40px auto; max-width: 420px; }
+    .gate input { width: 100%; padding: 10px; font-size: 15px; margin: 8px 0; }
+    .btn { background: #1f6feb; color: #fff; border: 0; border-radius: 6px; padding: 10px 18px; font-size: 15px; cursor: pointer; }
+    .btn:disabled { opacity: .5; cursor: default; }
+    .case { border: 1px solid #2a3340; border-radius: 10px; padding: 18px; margin: 22px 0; }
+    .brief { white-space: pre-wrap; font-size: 13px; line-height: 1.5; background: #0f141b; border: 1px solid #222b36; border-radius: 8px; padding: 12px; max-height: 320px; overflow: auto; }
+    .cand { border: 1px solid #2a3340; border-radius: 8px; padding: 12px; margin: 12px 0; }
+    .cand h4 { margin: 0 0 6px; }
+    .dose { font-weight: 600; color: #7fd1ff; }
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr) 2fr; gap: 8px; margin-top: 10px; align-items: end; }
+    .grid label { font-size: 12px; color: #9aa7b4; display: block; margin-bottom: 3px; }
+    .grid select, .grid input, .casefoot input, .casefoot select { width: 100%; padding: 7px; font-size: 13px; }
+    .casefoot { display: grid; grid-template-columns: 1fr 2fr; gap: 10px; margin-top: 12px; }
+    .err { color: #ff7b72; margin: 8px 0; }
+    .ok { color: #56d364; }
+    textarea { width: 100%; min-height: 70px; padding: 8px; font-size: 14px; }
+    .muted { color: #9aa7b4; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="rwrap">
+    <h1>Blinded first-in-human starting-dose review</h1>
+    <p class="muted">For each case you see an anonymized preclinical brief and three candidate starting doses
+      (A, B, C), presented blind from different sources. Please judge each on scientific defensibility only.
+      There is no single correct dose. Do not try to guess the source.</p>
+
+    <div id="gate" class="gate">
+      <label class="muted">Access password</label>
+      <input id="pw" type="password" placeholder="password" autocomplete="off" />
+      <button id="load" class="btn">Load cases</button>
+      <div id="gateErr" class="err"></div>
+    </div>
+
+    <div id="app" hidden>
+      <label class="muted">Your name (for our records)</label>
+      <input id="reviewer" type="text" placeholder="e.g. Liang Zhao" style="width:100%;padding:9px;font-size:14px;margin:6px 0 4px;" />
+      <div id="cases"></div>
+      <label class="muted">Any overall comment (optional)</label>
+      <textarea id="overall" placeholder="overall thoughts, the hardest call, whether length influenced you..."></textarea>
+      <div style="margin-top:16px;">
+        <button id="submit" class="btn">Submit review</button>
+        <span id="submitMsg"></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var PW = "";
+    var CASES = [];
+    function el(t, a, c) { var e = document.createElement(t); if (a) for (var k in a) e.setAttribute(k, a[k]); if (c != null) e.innerHTML = c; return e; }
+
+    function sel(opts) {
+      var s = '<option value=""></option>';
+      for (var i = 0; i < opts.length; i++) s += '<option>' + opts[i] + '</option>';
+      return s;
+    }
+
+    function renderCases() {
+      var root = document.getElementById("cases");
+      root.innerHTML = "";
+      CASES.forEach(function (c) {
+        var box = el("div", { "class": "case" });
+        box.appendChild(el("h3", null, "Case " + c.n));
+        box.appendChild(el("div", { "class": "brief" }, c.brief.replace(/</g, "&lt;")));
+        c.candidates.forEach(function (cand) {
+          var cd = el("div", { "class": "cand" });
+          cd.appendChild(el("h4", null, "Candidate " + cand.label));
+          cd.appendChild(el("p", null, '<span class="dose">Starting dose: ' + cand.dose + '</span>'));
+          cd.appendChild(el("p", { style: "font-size:13px;line-height:1.5;" }, cand.text.replace(/</g, "&lt;")));
+          var g = el("div", { "class": "grid" });
+          g.innerHTML =
+            '<div><label>Defensibility</label><select data-c="' + c.id + '" data-l="' + cand.label + '" data-f="defensibility">' + sel(["0 indefensible", "1 acceptable", "2 strong"]) + '</select></div>' +
+            '<div><label>Safe?</label><select data-c="' + c.id + '" data-l="' + cand.label + '" data-f="safe">' + sel(["yes", "borderline", "no"]) + '</select></div>' +
+            '<div><label>Over-conservative?</label><select data-c="' + c.id + '" data-l="' + cand.label + '" data-f="optimus">' + sel(["ok", "too low", "too high"]) + '</select></div>' +
+            '<div><label>One-line issue</label><input data-c="' + c.id + '" data-l="' + cand.label + '" data-f="issue" type="text" /></div>';
+          cd.appendChild(g);
+          box.appendChild(cd);
+        });
+        var foot = el("div", { "class": "casefoot" });
+        foot.innerHTML =
+          '<div><label class="muted">Most defensible</label><select data-c="' + c.id + '" data-f="most">' + sel(["A", "B", "C"]) + '</select></div>' +
+          '<div><label class="muted">Recognize the real trial? (no / yes: which)</label><input data-c="' + c.id + '" data-f="recognize" type="text" value="no" /></div>';
+        box.appendChild(foot);
+        root.appendChild(box);
+      });
+    }
+
+    function collect() {
+      var byCase = {};
+      CASES.forEach(function (c) { byCase[c.id] = { id: c.id, candidates: {}, most_defensible: "", recognize: "" }; });
+      document.querySelectorAll("[data-c]").forEach(function (n) {
+        var cid = n.getAttribute("data-c"), f = n.getAttribute("data-f"), l = n.getAttribute("data-l");
+        if (f === "most") byCase[cid].most_defensible = n.value;
+        else if (f === "recognize") byCase[cid].recognize = n.value;
+        else { byCase[cid].candidates[l] = byCase[cid].candidates[l] || {}; byCase[cid].candidates[l][f] = n.value; }
+      });
+      return { cases: byCase, overall_comment: document.getElementById("overall").value };
+    }
+
+    document.getElementById("load").onclick = function () {
+      PW = document.getElementById("pw").value;
+      document.getElementById("gateErr").textContent = "";
+      fetch("/api/review?action=cases&password=" + encodeURIComponent(PW))
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (x) {
+          if (!x.ok) { document.getElementById("gateErr").textContent = x.j.error || "error"; return; }
+          CASES = x.j.cases;
+          renderCases();
+          document.getElementById("gate").hidden = true;
+          document.getElementById("app").hidden = false;
+        })
+        .catch(function (e) { document.getElementById("gateErr").textContent = String(e); });
+    };
+
+    document.getElementById("submit").onclick = function () {
+      var msg = document.getElementById("submitMsg");
+      msg.textContent = " submitting...";
+      var payload = { action: "submit", password: PW, reviewer: document.getElementById("reviewer").value, submission: collect() };
+      fetch("/api/review", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) })
+        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, j: j }; }); })
+        .then(function (x) {
+          if (x.ok && x.j.ok) { msg.innerHTML = ' <span class="ok">Submitted. Thank you.</span>'; document.getElementById("submit").disabled = true; }
+          else { msg.innerHTML = ' <span class="err">' + (x.j.error || "error") + '</span>'; }
+        })
+        .catch(function (e) { msg.innerHTML = ' <span class="err">' + String(e) + '</span>'; });
+    };
+  </script>
+</body>
+</html>
